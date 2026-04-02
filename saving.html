@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সঞ্চয় ট্র্যাকার Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="file_0000000073b071fab851104063c48aa9.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --secondary:#7c3aed;
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+    --bg:#f4f7fb;
+    --bg-soft:#eef4ff;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+    --muted-2:#94a3b8;
+    --border:#e2e8f0;
+    --border-soft:#edf2f7;
+    --empty:#e5e7eb;
+    --shadow-lg:0 22px 50px rgba(15,23,42,0.08);
+    --shadow-md:0 12px 30px rgba(15,23,42,0.06);
+    --shadow-sm:0 8px 18px rgba(15,23,42,0.04);
+    --radius-xl:28px;
+    --radius-lg:22px;
+    --radius-md:16px;
+    --radius-sm:12px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Hind Siliguri',sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.09), transparent 32%),
+        radial-gradient(circle at top right, rgba(124,58,237,0.08), transparent 26%),
+        linear-gradient(180deg, #f8fbff 0%, #f4f7fb 42%, #eef4fb 100%);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* ========== HERO ========== */
+.header{
+    position:relative;
+    overflow:hidden;
+    padding:34px 16px 96px;
+    background:
+        linear-gradient(135deg, rgba(29,78,216,0.96) 0%, rgba(37,99,235,0.94) 46%, rgba(124,58,237,0.94) 100%);
+    box-shadow:0 14px 36px rgba(37,99,235,0.20);
+}
+
+.header::before,
+.header::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+
+.header::before{
+    width:260px;
+    height:260px;
+    top:-110px;
+    right:-60px;
+    background:rgba(255,255,255,0.09);
+}
+
+.header::after{
+    width:180px;
+    height:180px;
+    bottom:-80px;
+    left:-40px;
+    background:rgba(255,255,255,0.07);
+}
+
+.hero{
+    max-width:1400px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    max-width:760px;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.14);
+    color:#fff;
+    font-size:0.84rem;
+    font-weight:700;
+    backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,0.18);
+    margin-bottom:14px;
+}
+
+.hero-title{
+    font-size:2rem;
+    font-weight:800;
+    letter-spacing:-0.02em;
+    color:#fff;
+    line-height:1.15;
+    margin-bottom:10px;
+}
+
+.hero-text{
+    color:rgba(255,255,255,0.90);
+    font-size:0.98rem;
+    line-height:1.7;
+    max-width:700px;
+}
+
+.page-wrap{
+    max-width:1400px;
+    margin:-58px auto 0;
+    padding:0 18px 24px;
+    position:relative;
+    z-index:5;
+}
+
+/* ========== CONTROL PANEL ========== */
+.control-shell{
+    background:rgba(255,255,255,0.84);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.75);
+    border-radius:var(--radius-xl);
+    box-shadow:var(--shadow-lg);
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.control-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    margin-bottom:14px;
+    flex-wrap:wrap;
+}
+
+.section-heading h2{
+    font-size:1.12rem;
+    font-weight:800;
+    color:var(--text);
+    margin-bottom:4px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    font-size:0.9rem;
+}
+
+.panel-chip-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.panel-chip{
+    display:inline-flex;
+    align-items:center;
+    padding:10px 16px;
+    border-radius:999px;
+    background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+    border:1px solid #dbe7f5;
+    color:#334155;
+    font-weight:800;
+    font-size:0.82rem;
+    letter-spacing:.01em;
+    box-shadow:0 10px 22px rgba(15,23,42,0.05);
+}
+
+.panel-chip.active{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    border-color:transparent;
+    box-shadow:0 14px 30px rgba(37,99,235,0.20);
+}
+
+.top-bar{
+    display:grid;
+    grid-template-columns: 1.5fr 230px 230px;
+    gap:12px;
+}
+
+.input-group{
+    position:relative;
+}
+
+.top-bar input,
+.top-bar select{
+    width:100%;
+    padding:15px 16px;
+    border-radius:18px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,0.95);
+    font-family:inherit;
+    font-size:0.95rem;
+    font-weight:600;
+    color:var(--text);
+    outline:none;
+    box-shadow:var(--shadow-sm);
+    transition:all .2s ease;
+}
+
+.top-bar input{
+    padding-left:48px;
+    background:linear-gradient(180deg,#ffffff 0%, #f8fbff 100%);
+    border:1px solid #dbe7f5;
+    box-shadow:0 12px 24px rgba(15,23,42,0.05);
+}
+
+.top-bar input:focus,
+.top-bar select:focus{
+    border-color:#93c5fd;
+    box-shadow:0 0 0 4px rgba(37,99,235,0.10);
+    background:#fff;
+}
+
+.top-bar input:focus{
+    transform:translateY(-1px);
+}
+
+.input-icon{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--muted-2);
+    font-size:1rem;
+    pointer-events:none;
+}
+
+.input-group::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:18px;
+    pointer-events:none;
+    box-shadow:0 0 0 0 rgba(37,99,235,0);
+    transition:all .2s ease;
+}
+
+.input-group:focus-within::after{
+    box-shadow:0 0 0 4px rgba(37,99,235,0.10);
+}
+
+/* ========== SUMMARY ========== */
+.summary{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(220px,1fr));
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.94));
+    border-radius:24px;
+    padding:20px;
+    box-shadow:var(--shadow-md);
+    border:1px solid rgba(226,232,240,0.9);
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(15,23,42,0.08);
+    border-color:#dbeafe;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg, var(--primary), var(--secondary));
+    opacity:.95;
+}
+
+.card-label{
+    font-size:0.82rem;
+    color:var(--muted);
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.card h3{
+    font-size:1.55rem;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:5px;
+    letter-spacing:-0.02em;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:0.83rem;
+    line-height:1.45;
+}
+
+/* ========== BOARD ========== */
+.board{
+    background:rgba(255,255,255,0.92);
+    border-radius:var(--radius-xl);
+    padding:18px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid rgba(255,255,255,0.78);
+    transition:all .25s ease;
+    position:relative;
+}
+
+.board.openable{
+    cursor:pointer;
+}
+
+.board-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+    margin-bottom:16px;
+    flex-wrap:wrap;
+    padding:4px 2px 0;
+    transition:all .22s ease;
+}
+
+.board-head h2{
+    font-size:1.15rem;
+    font-weight:800;
+    margin-bottom:4px;
+    color:var(--text);
+    letter-spacing:-0.02em;
+}
+
+.board-head p{
+    font-size:0.9rem;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.board-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.home-btn,
+.close-board-btn{
+    border:none;
+    padding:11px 16px;
+    border-radius:999px;
+    font-family:inherit;
+    font-weight:800;
+    font-size:0.84rem;
+    cursor:pointer;
+    transition:all .2s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+
+.home-btn{
+    background:linear-gradient(135deg,#eff6ff,#eef2ff);
+    color:#1e3a8a;
+    border:1px solid #c7d2fe;
+    box-shadow:0 8px 22px rgba(37,99,235,0.08);
+}
+
+.home-btn:hover,
+.close-board-btn:hover{
+    transform:translateY(-1px);
+}
+
+.close-board-btn{
+    background:linear-gradient(135deg,#fee2e2,#fff1f2);
+    color:#b91c1c;
+    border:1px solid #fecaca;
+    display:none;
+}
+
+.legend{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    font-size:0.82rem;
+    color:var(--muted);
+    background:#f8fafc;
+    padding:10px 14px;
+    border-radius:999px;
+    border:1px solid #e2e8f0;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-weight:700;
+}
+
+.legend-box{
+    width:14px;
+    height:14px;
+    border-radius:5px;
+}
+
+.legend-box.paid{ background:var(--success); }
+.legend-box.unpaid{ background:var(--danger); }
+.legend-box.empty{ background:var(--empty); }
+
+.table-shell{
+    background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border-radius:24px;
+    border:1px solid var(--border);
+    overflow:hidden;
+    transition:all .2s ease;
+}
+
+.table-wrap{
+    overflow-x:auto;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    background:#fff;
+}
+
+.table-wrap::-webkit-scrollbar{
+    height:10px;
+    width:10px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:999px;
+}
+
+.table-wrap::-webkit-scrollbar-track{
+    background:#f8fafc;
+}
+
+.table-grid{
+    min-width:max-content;
+}
+
+.grid-header,
+.grid-row{
+    display:grid;
+    grid-template-columns: 190px 100px 110px repeat(var(--weeks-count), 42px);
+    align-items:center;
+}
+
+.grid-header{
+    position:sticky;
+    top:0;
+    z-index:5;
+    background:linear-gradient(180deg,#f8fbff 0%, #f2f7fd 100%);
+    border-bottom:1px solid var(--border);
+}
+
+.grid-header > div,
+.grid-row > div{
+    padding:11px 6px;
+    border-right:1px solid #edf2f7;
+    text-align:center;
+}
+
+.grid-header > div:last-child,
+.grid-row > div:last-child{
+    border-right:none;
+}
+
+.grid-header .sticky-col,
+.grid-row .sticky-col{
+    position:sticky;
+    background:inherit;
+    z-index:4;
+}
+
+.grid-header .sticky-col{
+    font-weight:800;
+}
+
+.grid-row{
+    background:#fff;
+    border-bottom:1px solid #f1f5f9;
+    transition:background .18s ease, transform .18s ease;
+}
+
+.grid-row:last-child{
+    border-bottom:none;
+}
+
+.grid-row:hover{
+    background:#f8fbff;
+}
+
+.grid-row:hover .sticky-col{
+    background:#f8fbff;
+}
+
+.grid-header .sticky-col.name-col,
+.grid-row .sticky-col.name-col{
+    left:0;
+    min-width:190px;
+    text-align:left;
+    padding-left:14px;
+}
+
+.grid-header .sticky-col.amount-col,
+.grid-row .sticky-col.amount-col{
+    left:190px;
+    min-width:100px;
+}
+
+.grid-header .sticky-col.status-col,
+.grid-row .sticky-col.status-col{
+    left:290px;
+    min-width:110px;
+}
+
+.member-name{
+    font-weight:700;
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.member-name span:first-child{
+    font-size:0.93rem;
+    line-height:1.25;
+}
+
+.member-sub{
+    font-size:0.72rem;
+    color:var(--muted);
+    font-weight:700;
+}
+
+.member-amount{
+    font-weight:800;
+    color:var(--success);
+    font-size:0.86rem;
+}
+
+.member-status{
+    font-size:0.72rem;
+    font-weight:800;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 8px;
+    border-radius:999px;
+    border:1px solid #e2e8f0;
+    line-height:1.2;
+    white-space:nowrap;
+}
+
+.badge-paid{
+    color:var(--success);
+    background:#ecfdf5;
+    border-color:#bbf7d0;
+}
+
+.badge-unpaid{
+    color:var(--danger);
+    background:#fef2f2;
+    border-color:#fecaca;
+}
+
+.badge-mixed{
+    color:var(--warning);
+    background:#fff7ed;
+    border-color:#fed7aa;
+}
+
+.badge-empty{
+    color:var(--muted);
+    background:#f8fafc;
+    border-color:#e2e8f0;
+}
+
+.cell{
+    width:26px;
+    height:26px;
+    margin:0 auto;
+    border-radius:8px;
+    transition:all .18s ease;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,0.20);
+}
+
+.cell:hover{
+    transform:scale(1.08);
+}
+
+.cell.paid{
+    background:linear-gradient(180deg,#22c55e 0%,#16a34a 100%);
+}
+
+.cell.unpaid{
+    background:linear-gradient(180deg,#ef4444 0%,#dc2626 100%);
+}
+
+.cell.empty{
+    background:#e5e7eb;
+}
+
+.loading,
+.empty-message{
+    text-align:center;
+    padding:34px 14px;
+    color:var(--muted);
+    font-weight:700;
+    font-size:0.95rem;
+}
+
+.sync-note{
+    margin-top:14px;
+    padding:15px 16px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#eff6ff 0%,#f5f3ff 100%);
+    border:1px solid #dbeafe;
+    color:#334155;
+    font-size:0.9rem;
+    line-height:1.65;
+    font-weight:600;
+}
+
+/* ========== TABLE TYPOGRAPHY ========== */
+.grid-header small{
+    display:block;
+    margin-top:2px;
+    font-size:0.66rem;
+    color:var(--muted);
+    font-weight:700;
+}
+
+/* ========== SEARCH FOCUS MODE ========== */
+.page-wrap.search-active .summary{
+    display:none;
+}
+
+.page-wrap.search-active .board{
+    margin-top:0;
+}
+
+.page-wrap.search-active .board-head{
+    position:sticky;
+    top:10px;
+    z-index:20;
+    padding:14px 16px;
+    margin-bottom:14px;
+    border-radius:18px;
+    background:linear-gradient(135deg, rgba(37,99,235,0.08), rgba(124,58,237,0.08));
+    border:1px solid rgba(37,99,235,0.12);
+    box-shadow:0 10px 25px rgba(15,23,42,0.08);
+    backdrop-filter:blur(10px);
+}
+
+.page-wrap.search-active .table-shell{
+    box-shadow:0 10px 25px rgba(15,23,42,0.05);
+}
+
+/* ========== BOARD FULLSCREEN MODE ========== */
+body.board-fullscreen{
+    overflow:hidden;
+}
+
+body.board-fullscreen .control-shell,
+body.board-fullscreen .summary,
+body.board-fullscreen .header{
+    display:none;
+}
+
+body.board-fullscreen .page-wrap{
+    max-width:none;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+body.board-fullscreen .board{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    width:100vw;
+    height:100vh;
+    margin:0;
+    border-radius:0;
+    border:none;
+    box-shadow:none;
+    padding:18px;
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.07), transparent 25%),
+        radial-gradient(circle at top right, rgba(124,58,237,0.08), transparent 26%),
+        linear-gradient(180deg, #fbfdff 0%, #f3f7fd 100%);
+    cursor:default;
+}
+
+body.board-fullscreen .board-head{
+    position:sticky;
+    top:0;
+    z-index:50;
+    padding:14px 16px;
+    margin-bottom:16px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(226,232,240,0.95);
+    box-shadow:0 12px 30px rgba(15,23,42,0.08);
+}
+
+body.board-fullscreen .table-shell{
+    height:calc(100vh - 170px);
+    display:flex;
+    flex-direction:column;
+    border-radius:24px;
+    box-shadow:0 16px 35px rgba(15,23,42,0.08);
+}
+
+body.board-fullscreen .table-wrap{
+    flex:1;
+}
+
+body.board-fullscreen .close-board-btn{
+    display:inline-flex;
+}
+
+body.board-fullscreen .sync-note{
+    margin-top:12px;
+}
+
+ /* =========================
+   PREMIUM SAVINGS BUTTON
+========================= */
+.savings-float-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    z-index: 9999;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 22px;
+
+    box-shadow: 
+        0 0 0 0 rgba(59, 130, 246, 0.7),
+        0 10px 25px rgba(37, 99, 235, 0.4);
+
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.2s ease;
+}
+
+/* Hover Effect */
+.savings-float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dragging */
+.savings-float-btn.dragging {
+    cursor: grabbing;
+    transform: scale(0.95);
+    animation: none;
+}
+
+/* Icon */
+.savings-float-btn i {
+    font-size: 24px;
+}
+
+/* TEXT HIDE (optional) */
+.savings-float-btn span {
+    display: none;
+}
+
+/* 🔵 Pulse Glow Animation */
+@keyframes pulseGlow {
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(59, 65, 246, 0.7),
+            0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+    70% {
+        box-shadow:
+            0 0 0 20px rgba(59, 130, 246, 0),
+            0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(59, 130, 246, 0),
+            0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .savings-float-btn {
+        width: 55px;
+        height: 55px;
+        bottom: 110px;
+    }
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px){
+    .top-bar{
+        grid-template-columns:1fr;
+    }
+
+    .summary{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width: 860px){
+    .hero-title{
+        font-size:1.55rem;
+    }
+
+    .hero-text{
+        font-size:0.9rem;
+    }
+}
+
+@media (max-width: 640px){
+    .header{
+        padding:24px 12px 86px;
+    }
+
+    .hero-badge{
+        font-size:0.72rem;
+        padding:8px 12px;
+    }
+
+    .hero-title{
+        font-size:1.28rem;
+    }
+
+    .hero-text{
+        font-size:0.82rem;
+        line-height:1.55;
+    }
+
+    .page-wrap{
+        padding:0 12px 16px;
+        margin:-52px auto 0;
+    }
+
+    .control-shell,
+    .board{
+        border-radius:20px;
+        padding:12px;
+    }
+
+    .section-heading h2{
+        font-size:0.96rem;
+    }
+
+    .section-heading p{
+        font-size:0.76rem;
+    }
+
+    .panel-chip-group{
+        gap:8px;
+    }
+
+    .panel-chip{
+        padding:8px 12px;
+        font-size:0.68rem;
+    }
+
+    .top-bar input,
+    .top-bar select{
+        padding:12px 12px;
+        font-size:0.88rem;
+        border-radius:14px;
+    }
+
+    .top-bar input{
+        padding-left:40px;
+    }
+
+    .input-icon{
+        left:13px;
+        font-size:0.9rem;
+    }
+
+    .summary{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .card{
+        padding:13px 12px;
+        border-radius:18px;
+    }
+
+    .card-label{
+        font-size:0.68rem;
+        margin-bottom:5px;
+    }
+
+    .card h3{
+        font-size:1.02rem;
+    }
+
+    .card p{
+        font-size:0.68rem;
+        line-height:1.3;
+    }
+
+    .board-head h2{
+        font-size:0.92rem;
+    }
+
+    .board-head p{
+        font-size:0.74rem;
+    }
+
+    .board-actions{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .close-board-btn{
+        font-size:0.72rem;
+        padding:9px 12px;
+    }
+
+    .legend{
+        font-size:0.7rem;
+        padding:8px 10px;
+        gap:10px;
+        border-radius:14px;
+    }
+
+    .grid-header,
+    .grid-row{
+        grid-template-columns: 78px 50px 52px repeat(var(--weeks-count), 34px);
+    }
+
+    .grid-header > div,
+    .grid-row > div{
+        padding:7px 3px;
+        font-size:0.58rem;
+    }
+
+    .grid-header .sticky-col.name-col,
+    .grid-row .sticky-col.name-col{
+        left:0;
+        min-width:78px;
+        padding-left:6px;
+    }
+
+    .grid-header .sticky-col.amount-col,
+    .grid-row .sticky-col.amount-col{
+        left:78px;
+        min-width:50px;
+    }
+
+    .grid-header .sticky-col.status-col,
+    .grid-row .sticky-col.status-col{
+        left:128px;
+        min-width:52px;
+    }
+
+    .member-name span:first-child{
+        font-size:0.62rem;
+        line-height:1.12;
+        word-break:break-word;
+    }
+
+    .member-sub{
+        font-size:0.47rem;
+    }
+
+    .member-amount{
+        font-size:0.54rem;
+        line-height:1.1;
+    }
+
+    .member-status{
+        font-size:0.44rem;
+        padding:2px 3px;
+    }
+
+    .grid-header small{
+        font-size:0.5rem;
+    }
+
+    .cell{
+        width:26px;
+        height:26px;
+        border-radius:6px;
+    }
+
+    .sync-note{
+        padding:12px;
+        font-size:0.74rem;
+        border-radius:14px;
+    }
+
+    .page-wrap.search-active .board-head{
+        top:8px;
+        padding:10px 12px;
+        border-radius:14px;
+        margin-bottom:10px;
+    }
+
+    .page-wrap.search-active .board-head h2{
+        font-size:0.88rem;
+    }
+
+    .page-wrap.search-active .board-head p{
+        font-size:0.7rem;
+    }
+
+    .page-wrap.search-active .legend{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    body.board-fullscreen .board{
+        padding:10px;
+    }
+
+    body.board-fullscreen .board-head{
+        padding:10px 12px;
+        border-radius:14px;
+        margin-bottom:10px;
+    }
+
+    body.board-fullscreen .table-shell{
+        height:calc(100vh - 145px);
+    }
+}
+
+@media (max-width: 420px){
+    .summary{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-header,
+    .grid-row{
+        grid-template-columns: 72px 46px 48px repeat(var(--weeks-count), 32px);
+    }
+
+    .grid-header .sticky-col.name-col,
+    .grid-row .sticky-col.name-col{
+        min-width:72px;
+    }
+
+    .grid-header .sticky-col.amount-col,
+    .grid-row .sticky-col.amount-col{
+        left:72px;
+        min-width:46px;
+    }
+
+    .grid-header .sticky-col.status-col,
+    .grid-row .sticky-col.status-col{
+        left:118px;
+        min-width:48px;
+    }
+
+    .member-name span:first-child{
+        font-size:0.57rem;
+    }
+
+    .member-sub{
+        font-size:0.43rem;
+    }
+
+    .member-amount{
+        font-size:0.49rem;
+    }
+
+    .member-status{
+        font-size:0.40rem;
+        padding:2px;
+    }
+
+    .cell{
+        width:24px;
+        height:24px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header" id="homeSection">
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-badge">স্মার্ট সঞ্চয় ব্যবস্থাপনা</div>
+            <h1 class="hero-title">সদস্য সঞ্চয় ট্র্যাকার</h1>
+            <p class="hero-text">
+                মাসভিত্তিক শুক্রবারের সঞ্চয় অবস্থা, মোট সঞ্চয় এবং সদস্যভিত্তিক স্ট্যাটাস
+                সহজে দেখার জন্য ড্যাশবোর্ড।
+            </p>
+        </div>
+    </div>
+</div>
+<a href="index.html" id="savings-float-btn" class="savings-float-btn" title="সঞ্চয়ী">
+            <i class="fas fa-house"></i>
+            <span>সঞ্চয়</span>
+        </a>
+
+<div class="page-wrap">
+
+    <div class="control-shell">
+        <div class="control-top">
+            <div class="section-heading">
+                <h2>ফিল্টার ও সার্চ</h2>
+            </div>
+
+            <div class="panel-chip-group" aria-label="ড্যাশবোর্ড মোড">
+                <span class="panel-chip active">লাইভ ভিউ</span>
+            </div>
+        </div>
+
+        <div class="top-bar">
+            <div class="input-group">
+                <span class="input-icon">⌕</span>
+                <input type="text" id="search" placeholder="নাম দিয়ে খুঁজুন...">
+            </div>
+            <select id="monthSelect"></select>
+            <select id="yearRangeSelect">
+                <option value="ramadan-cycle" selected>রমজান চক্র ২০২৬-২০২৭</option>
+                <option value="all">সব মাস</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="card">
+            <div class="card-label">মোট সদস্য</div>
+            <h3 id="totalMembers">0</h3>
+            <p>বর্তমানে দৃশ্যমান সদস্য সংখ্যা</p>
+        </div>
+
+        <div class="card">
+            <div class="card-label">মোট সঞ্চয়</div>
+            <h3 id="totalAmount">৳ 0</h3>
+            <p>নির্বাচিত মাসের মোট সঞ্চয়</p>
+        </div>
+    </div>
+
+    <div class="board openable" id="savingsBoard">
+        <div class="board-head">
+            <div>
+                <h2 id="monthTitle">মাসভিত্তিক সঞ্চয় অবস্থা</h2>
+                <p>প্রতি শুক্রবার = ১০ টাকা</p>
+            </div>
+
+            <div class="board-actions">
+                                <div class="legend">
+                    <div class="legend-item"><span class="legend-box paid"></span> দিয়েছে</div>
+                    <div class="legend-item"><span class="legend-box unpaid"></span> দেয়নি</div>
+                    <div class="legend-item"><span class="legend-box empty"></span> তথ্য নেই</div>
+                </div>
+                <button class="close-board-btn" id="closeBoardBtn" type="button">✕ বন্ধ করুন</button>
+            </div>
+        </div>
+
+        <div class="table-shell">
+            <div class="table-wrap">
+                <div id="table" class="table-grid">
+                    <div class="loading">লোডিং হচ্ছে...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sync-note" id="syncNote">
+            সিস্টেম সঞ্চয়ের ঘর থেকে মোট হিসাব নিয়ে মূল সদস্য ডাটার সাথে স্বয়ংক্রিয়ভাবে সমন্বয় রাখে।
+        </div>
+    </div>
+
+</div>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, onValue, update, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const app = initializeApp({
+    databaseURL: "https://manobotar-shonchoy-default-rtdb.firebaseio.com"
+});
+
+const db = getDatabase(app);
+
+const WEEKLY_AMOUNT = 10;
+
+let members = [];
+let savings = {};
+let syncInProgress = false;
+let syncQueued = false;
+
+const board = document.getElementById("savingsBoard");
+const closeBoardBtn = document.getElementById("closeBoardBtn");
+
+const months = [];
+for (let y = 2026; y <= 2027; y++) {
+    for (let m = 0; m < 12; m++) {
+        const d = new Date(y, m, 1);
+        months.push({
+            key: `${y}-${String(m + 1).padStart(2, '0')}`,
+            label: d.toLocaleString('bn-BD', { month: 'long', year: 'numeric' }),
+            year: y,
+            month: m
+        });
+    }
+}
+
+const select = document.getElementById("monthSelect");
+months.forEach(m => {
+    const opt = document.createElement("option");
+    opt.value = m.key;
+    opt.textContent = m.label;
+    select.appendChild(opt);
+});
+
+const now = new Date();
+const defaultMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+select.value = months.some(m => m.key === defaultMonthKey) ? defaultMonthKey : "2026-03";
+
+function formatCurrency(amount) {
+    return `৳ ${Number(amount || 0).toLocaleString('bn-BD')}`;
+}
+
+function sanitizeText(value) {
+    return (value ?? "").toString().trim();
+}
+
+function getFridays(year, month) {
+    const d = new Date(year, month, 1);
+    const arr = [];
+    while (d.getMonth() === month) {
+        if (d.getDay() === 5) {
+            arr.push(d.getDate());
+        }
+        d.setDate(d.getDate() + 1);
+    }
+    return arr;
+}
+
+function getSelectedMonth() {
+    return months.find(m => m.key === select.value) || months[0];
+}
+
+function getMemberMonthData(memberId, monthKey) {
+    return savings?.[memberId]?.[monthKey] || {};
+}
+
+function getMonthPaidWeeks(memberId, monthKey) {
+    const monthData = getMemberMonthData(memberId, monthKey);
+    let count = 0;
+
+    Object.keys(monthData).forEach(key => {
+        if (key.startsWith("week") && monthData[key] === true) {
+            count++;
+        }
+    });
+
+    return count;
+}
+
+function getMonthAnyMarkedWeeks(memberId, monthKey) {
+    const monthData = getMemberMonthData(memberId, monthKey);
+    let count = 0;
+
+    Object.keys(monthData).forEach(key => {
+        if (key.startsWith("week") && (monthData[key] === true || monthData[key] === false)) {
+            count++;
+        }
+    });
+
+    return count;
+}
+
+function calculateMemberGrandTotal(memberId) {
+    const memberSavings = savings?.[memberId] || {};
+    let paidWeeks = 0;
+    let lastPaidDate = "";
+    let lastPaidAt = 0;
+
+    Object.entries(memberSavings).forEach(([monthKey, monthData]) => {
+        if (!monthData || typeof monthData !== "object") return;
+
+        const monthInfo = months.find(m => m.key === monthKey);
+        if (!monthInfo) return;
+
+        Object.entries(monthData).forEach(([weekKey, value]) => {
+            if (!weekKey.startsWith("week") || value !== true) return;
+
+            paidWeeks++;
+
+            const weekNumber = parseInt(weekKey.replace("week", ""), 10);
+            const fridays = getFridays(monthInfo.year, monthInfo.month);
+            const fridayDate = fridays[weekNumber - 1];
+
+            if (fridayDate) {
+                const dt = new Date(monthInfo.year, monthInfo.month, fridayDate);
+                const ts = dt.getTime();
+
+                if (ts > lastPaidAt) {
+                    lastPaidAt = ts;
+                    lastPaidDate = dt.toLocaleDateString('bn-BD');
+                }
+            }
+        });
+    });
+
+    return {
+        totalPaid: paidWeeks * WEEKLY_AMOUNT,
+        paidWeeks,
+        lastPaidDate: lastPaidDate || "তথ্য নেই",
+        lastPaidAt: lastPaidAt || 0
+    };
+}
+
+function getMemberMonthStatus(memberId, monthKey, fridayCount) {
+    const paidWeeks = getMonthPaidWeeks(memberId, monthKey);
+    const markedWeeks = getMonthAnyMarkedWeeks(memberId, monthKey);
+
+    if (markedWeeks === 0) {
+        return { text: "অপেক্ষমাণ", className: "badge-empty", type: "empty" };
+    }
+
+    if (paidWeeks === fridayCount && fridayCount > 0) {
+        return { text: "পূর্ণ", className: "badge-paid", type: "paid" };
+    }
+
+    if (paidWeeks === 0) {
+        return { text: "বাকি", className: "badge-unpaid", type: "unpaid" };
+    }
+
+    return { text: `${paidWeeks}/${fridayCount} সম্পন্ন`, className: "badge-mixed", type: "mixed" };
+}
+
+function shouldShowMember(member, monthKey, fridayCount, searchValue) {
+    const memberName = sanitizeText(member.name).toLowerCase();
+    if (searchValue && !memberName.includes(searchValue)) return false;
+    return true;
+}
+
+function updateSearchMode() {
+    const pageWrap = document.querySelector(".page-wrap");
+    const searchValue = sanitizeText(document.getElementById("search").value);
+
+    if (searchValue) {
+        pageWrap.classList.add("search-active");
+    } else {
+        pageWrap.classList.remove("search-active");
+    }
+}
+
+function render() {
+    const table = document.getElementById("table");
+    updateSearchMode();
+
+    const searchValue = sanitizeText(document.getElementById("search").value).toLowerCase();
+    const selectedMonth = getSelectedMonth();
+    const fridays = getFridays(selectedMonth.year, selectedMonth.month);
+    const fridayCount = fridays.length;
+
+    document.getElementById("monthTitle").textContent = `${selectedMonth.label} মাসের সঞ্চয় অবস্থা`;
+
+    const visibleMembers = members.filter(member =>
+        shouldShowMember(member, selectedMonth.key, fridayCount, searchValue)
+    );
+
+    let paidCells = 0;
+    let totalMonthAmount = 0;
+
+    table.style.setProperty("--weeks-count", fridayCount);
+
+    if (!visibleMembers.length) {
+        table.innerHTML = `<div class="empty-message">কোনো সদস্য পাওয়া যায়নি।</div>`;
+        document.getElementById("totalMembers").innerText = "0";
+        document.getElementById("totalAmount").innerText = "৳ 0";
+        return;
+    }
+
+    let html = `<div class="grid-header">`;
+    html += `<div class="sticky-col name-col">সদস্য</div>`;
+    html += `<div class="sticky-col amount-col">মোট সঞ্চয়</div>`;
+    html += `<div class="sticky-col status-col">অবস্থা</div>`;
+    fridays.forEach((date, index) => {
+        html += `<div>শু-${index + 1}<br><small>${date}</small></div>`;
+    });
+    html += `</div>`;
+
+    visibleMembers.forEach(member => {
+        const memberTotal = calculateMemberGrandTotal(member.id);
+        const status = getMemberMonthStatus(member.id, selectedMonth.key, fridayCount);
+
+        html += `<div class="grid-row">`;
+        html += `
+            <div class="sticky-col name-col">
+                <div class="member-name">
+                    <span>${sanitizeText(member.name || "নাম নেই")}</span>
+                    <span class="member-sub">${sanitizeText(member.role || "সদস্য")}</span>
+                </div>
+            </div>
+        `;
+
+        html += `
+            <div class="sticky-col amount-col">
+                <span class="member-amount">${formatCurrency(memberTotal.totalPaid)}</span>
+            </div>
+        `;
+
+        html += `
+            <div class="sticky-col status-col">
+                <span class="member-status ${status.className}">${status.text}</span>
+            </div>
+        `;
+
+        fridays.forEach((_, i) => {
+            const val = savings?.[member.id]?.[selectedMonth.key]?.[`week${i + 1}`];
+            let cls = "empty";
+            let title = "তথ্য নেই";
+
+            if (val === true) {
+                cls = "paid";
+                title = "দিয়েছে";
+                paidCells++;
+                totalMonthAmount += WEEKLY_AMOUNT;
+            } else if (val === false) {
+                cls = "unpaid";
+                title = "দেয়নি";
+            }
+
+            html += `<div><div class="cell ${cls}" title="${title}"></div></div>`;
+        });
+
+        html += `</div>`;
+    });
+
+    table.innerHTML = `<div class="table-grid">${html}</div>`;
+
+    document.getElementById("totalMembers").innerText = visibleMembers.length.toLocaleString('bn-BD');
+    document.getElementById("totalAmount").innerText = formatCurrency(totalMonthAmount);
+}
+
+async function syncMemberTotalsToMainPage() {
+    if (syncInProgress) {
+        syncQueued = true;
+        return;
+    }
+
+    syncInProgress = true;
+
+    try {
+        const updates = {};
+        let changedCount = 0;
+
+        const snap = await get(ref(db, "charity_members"));
+        const currentMembersData = snap.val() || {};
+
+        members.forEach(member => {
+            const totals = calculateMemberGrandTotal(member.id);
+            const current = currentMembersData?.[member.id] || {};
+
+            const currentTotalPaid = Number(current.totalPaid || 0);
+            const currentLastPaidDate = sanitizeText(current.lastPaidDate || "");
+            const currentLastPaidAt = Number(current.lastPaidAt || 0);
+
+            const needsUpdate =
+                currentTotalPaid !== totals.totalPaid ||
+                currentLastPaidDate !== totals.lastPaidDate ||
+                currentLastPaidAt !== totals.lastPaidAt;
+
+            if (needsUpdate) {
+                updates[`charity_members/${member.id}/totalPaid`] = totals.totalPaid;
+                updates[`charity_members/${member.id}/lastPaidDate`] = totals.lastPaidDate;
+                updates[`charity_members/${member.id}/lastPaidAt`] = totals.lastPaidAt;
+                updates[`charity_members/${member.id}/updatedAt`] = Date.now();
+                changedCount++;
+            }
+        });
+
+        if (changedCount > 0) {
+            await update(ref(db), updates);
+            document.getElementById("syncNote").innerHTML =
+                `✅ ${changedCount.toLocaleString('bn-BD')} জন সদস্যের মোট সঞ্চয় মূল ডাটার সাথে sync হয়েছে।`;
+        } else {
+            document.getElementById("syncNote").innerHTML =
+                `✅ সব সদস্যের মোট সঞ্চয় আগে থেকেই sync অবস্থায় আছে।`;
+        }
+    } catch (error) {
+        console.error("Sync error:", error);
+        document.getElementById("syncNote").innerHTML =
+            `⚠️ sync করতে সমস্যা হয়েছে। Firebase write permission ও data structure চেক করো।`;
+    } finally {
+        syncInProgress = false;
+        if (syncQueued) {
+            syncQueued = false;
+            syncMemberTotalsToMainPage();
+        }
+    }
+}
+
+function renderAndSync() {
+    render();
+    if (members.length) {
+        syncMemberTotalsToMainPage();
+    }
+}
+
+function openBoardFullscreen() {
+    document.body.classList.add("board-fullscreen");
+}
+
+function closeBoardFullscreen() {
+    document.body.classList.remove("board-fullscreen");
+}
+
+closeBoardBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeBoardFullscreen();
+});
+
+board.addEventListener("click", (e) => {
+    const clickedInteractive = e.target.closest("button, select, input, option");
+    if (clickedInteractive) return;
+
+    if (!document.body.classList.contains("board-fullscreen")) {
+        openBoardFullscreen();
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("board-fullscreen")) {
+        closeBoardFullscreen();
+    }
+});
+
+onValue(ref(db, "charity_members"), snap => {
+    const arr = [];
+    snap.forEach(c => {
+        arr.push({ id: c.key, ...c.val() });
+    });
+    members = arr;
+    renderAndSync();
+});
+
+onValue(ref(db, "member_savings"), snap => {
+    savings = snap.val() || {};
+    renderAndSync();
+});
+
+select.addEventListener("change", render);
+
+document.getElementById("search").addEventListener("input", () => {
+    updateSearchMode();
+    render();
+});
+
+
+
+render();
+</script>
+
+ <script>
+    /* =========================
+       SAVINGS FLOAT BUTTON DRAG
+    ========================= */
+    (function () {
+        const btn = document.getElementById('savings-float-btn');
+        if (!btn) return;
+
+        const STORAGE_KEY = 'savingsFloatBtnPosition';
+        const DRAG_THRESHOLD = 8;
+
+        let pointerId = null;
+        let isDragging = false;
+        let moved = false;
+
+        let startX = 0;
+        let startY = 0;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        function getViewportBounds() {
+            const rect = btn.getBoundingClientRect();
+            return {
+                minLeft: 8,
+                minTop: 8,
+                maxLeft: window.innerWidth - rect.width - 8,
+                maxTop: window.innerHeight - rect.height - 8
+            };
+        }
+
+        function clamp(value, min, max) {
+            return Math.min(Math.max(value, min), max);
+        }
+
+        function setButtonPosition(left, top, save = false) {
+            const bounds = getViewportBounds();
+
+            const safeLeft = clamp(left, bounds.minLeft, bounds.maxLeft);
+            const safeTop = clamp(top, bounds.minTop, bounds.maxTop);
+
+            btn.style.left = safeLeft + 'px';
+            btn.style.top = safeTop + 'px';
+            btn.style.right = 'auto';
+            btn.style.bottom = 'auto';
+
+            if (save) {
+                localStorage.setItem(
+                    STORAGE_KEY,
+                    JSON.stringify({ left: safeLeft, top: safeTop })
+                );
+            }
+        }
+
+        function restoreSavedPosition() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (!saved) return;
+
+            try {
+                const pos = JSON.parse(saved);
+                if (
+                    typeof pos.left === 'number' &&
+                    typeof pos.top === 'number'
+                ) {
+                    requestAnimationFrame(() => {
+                        setButtonPosition(pos.left, pos.top, false);
+                    });
+                }
+            } catch (error) {
+                console.warn('Saved button position is invalid:', error);
+            }
+        }
+
+        function handlePointerDown(e) {
+            if (e.button !== undefined && e.button !== 0) return;
+
+            pointerId = e.pointerId;
+            isDragging = false;
+            moved = false;
+
+            const rect = btn.getBoundingClientRect();
+
+            startX = e.clientX;
+            startY = e.clientY;
+            offsetX = e.clientX - rect.left;
+            offsetY = e.clientY - rect.top;
+
+            btn.setPointerCapture(pointerId);
+        }
+
+        function handlePointerMove(e) {
+            if (pointerId !== e.pointerId) return;
+
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+
+            if (!isDragging) {
+                if (Math.abs(deltaX) > DRAG_THRESHOLD || Math.abs(deltaY) > DRAG_THRESHOLD) {
+                    isDragging = true;
+                    moved = true;
+                    btn.classList.add('dragging');
+
+                    const rect = btn.getBoundingClientRect();
+                    btn.style.left = rect.left + 'px';
+                    btn.style.top = rect.top + 'px';
+                    btn.style.right = 'auto';
+                    btn.style.bottom = 'auto';
+                } else {
+                    return;
+                }
+            }
+
+            e.preventDefault();
+
+            const newLeft = e.clientX - offsetX;
+            const newTop = e.clientY - offsetY;
+
+            setButtonPosition(newLeft, newTop, false);
+        }
+
+        function handlePointerUp(e) {
+            if (pointerId !== e.pointerId) return;
+
+            if (isDragging) {
+                const rect = btn.getBoundingClientRect();
+                setButtonPosition(rect.left, rect.top, true);
+            }
+
+            btn.classList.remove('dragging');
+
+            try {
+                btn.releasePointerCapture(pointerId);
+            } catch (error) {}
+
+            pointerId = null;
+            isDragging = false;
+
+            setTimeout(() => {
+                moved = false;
+            }, 0);
+        }
+
+        function handleClick(e) {
+            if (moved) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }
+
+        function handleResize() {
+            const rect = btn.getBoundingClientRect();
+
+            if (btn.style.left || btn.style.top) {
+                setButtonPosition(rect.left, rect.top, true);
+            }
+        }
+
+        restoreSavedPosition();
+
+        btn.addEventListener('pointerdown', handlePointerDown);
+        btn.addEventListener('pointermove', handlePointerMove);
+        btn.addEventListener('pointerup', handlePointerUp);
+        btn.addEventListener('pointercancel', handlePointerUp);
+        btn.addEventListener('click', handleClick);
+
+        window.addEventListener('resize', handleResize);
+    })();
+    </script>
+
+</body>
+</html>
