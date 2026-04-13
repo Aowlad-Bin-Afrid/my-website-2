@@ -24,13 +24,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/LOGO-HYO.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/style.css">
-
-     
- 
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body style="overflow:hidden;">
 
@@ -40,26 +35,20 @@
                 <i class="fas fa-heart"></i>
                 <span>স্বাগতম</span>
             </div>
-
             <div class="welcome-logo-wrap">
                 <img src="assets/images/LOGO-HYO.png" alt="লোগো">
             </div>
-
             <h1 class="welcome-title">হিয়াতপুর ইয়ুথ অরর্গানাইজেশন</h1>
-
             <p class="welcome-text">
                 আপনার <span class="welcome-highlight">দান, সহযোগিতা এবং সমর্থন</span> আমাদের মানবিক কার্যক্রমকে আরও শক্তিশালী করে।
                 কিছুক্ষণের মধ্যেই ওয়েবসাইটের সকল তথ্য আপনার সামনে লোড হয়ে যাবে।
             </p>
-
             <div class="welcome-loader">
                 <span></span>
             </div>
-
             <div class="welcome-small">ডাটা লোড হচ্ছে, অনুগ্রহ করে একটু অপেক্ষা করুন...</div>
         </div>
     </div>
-
 
     <header class="header">
         <div class="header-content">
@@ -69,10 +58,11 @@
             <p>একতা, সেবা ও স্বচ্ছতার অঙ্গীকার</p>
         </div>
     </header>
+
     <a href="saving.html" id="savings-float-btn" class="savings-float-btn" title="সঞ্চয়ী">
-            <i class="fas fa-hand-holding-usd"></i>
-            <span>সঞ্চয়</span>
-        </a>
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>সঞ্চয়</span>
+    </a>
 
     <div class="container">
 
@@ -119,13 +109,11 @@
         <!-- Member Section -->
         <div id="member-sec" class="hidden fade-in">
             <h3 style="margin-bottom: 20px; text-align: center; font-weight: 700; color: #ffffff;">সদস্য পরিচিতি</h3>
-
             <div class="search-container">
                 <i class="fas fa-search"></i>
                 <input type="text" id="memberSearchInp" placeholder="নাম অথবা ফোন দিয়ে খুঁজুন..."
                     aria-label="সদস্য খোঁজার ফিল্ড">
             </div>
-
             <div id="full-members-list"></div>
         </div>
 
@@ -133,7 +121,6 @@
         <div id="list-sec" class="hidden fade-in">
             <h3 style="margin-bottom: 20px; text-align: center; font-weight: 700; color: #ffffff;">আর্থিক প্রতিবেদন</h3>
 
-            <!-- Balance Card -->
             <div class="balance-card-main">
                 <div class="balance-label">বর্তমান তহবিলের পরিমাণ (Cash in Hand)</div>
                 <h1 class="balance-amount" id="net-balance">৳ ০</h1>
@@ -149,7 +136,6 @@
                 </div>
             </div>
 
-            <!-- Donation Sources Analysis -->
             <div class="calc-card">
                 <h4><i class="fas fa-chart-line"></i> অনুদানের উৎস ও বিশ্লেষণ</h4>
                 <div class="calc-row">
@@ -170,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- Expense Breakdown -->
             <div class="calc-card">
                 <h4><i class="fas fa-file-invoice-dollar"></i> ব্যয়ের খাতসমূহ</h4>
                 <div id="expense-breakdown-list">
@@ -181,7 +166,6 @@
                 </div>
             </div>
 
-            <!-- Transaction History -->
             <h4 class="section-title">
                 <i class="fas fa-history"></i> লেনদেনের বিস্তারিত ইতিহাস
             </h4>
@@ -199,13 +183,10 @@
             <div class="glass-card">
                 <h3 style="text-align: center; margin-bottom: 24px; font-weight: 700;">অনুদান প্রদান</h3>
 
-                <div
-                    style="background: linear-gradient(135deg, #1e293b, #334155); padding: 24px; border-radius: var(--radius-lg); color: white; margin-bottom: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: var(--shadow-lg);">
-                    <div style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 10px; font-weight: 600;">বিকাশ / নগদ
-                        (পার্সোনাল)</div>
+                <div style="background: linear-gradient(135deg, #1e293b, #334155); padding: 24px; border-radius: var(--radius-lg); color: white; margin-bottom: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: var(--shadow-lg);">
+                    <div style="font-size: 0.85rem; opacity: 0.8; margin-bottom: 10px; font-weight: 600;">বিকাশ / নগদ (পার্সোনাল)</div>
                     <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
-                        <div style="font-size: 1.3rem; font-weight: 800; letter-spacing: 1px; word-break: break-word; flex: 1;"
-                            id="admin-num">01XXXXXXXXX</div>
+                        <div style="font-size: 1.3rem; font-weight: 800; letter-spacing: 1px; word-break: break-word; flex: 1;" id="admin-num">01XXXXXXXXX</div>
                         <button id="copy-btn"
                             style="background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; padding: 10px 14px; border-radius: var(--radius-sm); cursor: pointer; transition: all var(--transition-fast); font-size: 1rem; flex-shrink: 0; font-family: inherit;"
                             title="নম্বর কপি করুন" aria-label="নম্বর কপি করুন">
@@ -217,42 +198,35 @@
                 <input type="text" id="don-name" placeholder="আপনার নাম" maxlength="100">
                 <input type="number" id="don-amt" placeholder="টাকার পরিমাণ" min="1" max="999999" inputmode="numeric">
                 <button id="submit-btn" onclick="AppState.submitDonation()"
-                    style="width: 100%; padding: 16px; border: none; border-radius: var(--radius-md); background: var(--primary-gradient); color: white; font-weight: 700; cursor: pointer; box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3); transition: all var(--transition-base); font-family: inherit; font-size: 1rem;">নিশ্চিত
-                    করুন</button>
+                    style="width: 100%; padding: 16px; border: none; border-radius: var(--radius-md); background: var(--primary-gradient); color: white; font-weight: 700; cursor: pointer; box-shadow: 0 8px 15px rgba(37, 99, 235, 0.3); transition: all var(--transition-base); font-family: inherit; font-size: 1rem;">নিশ্চিত করুন</button>
                 <div id="donation-success-box" class="donation-success-box hidden">
                     <div class="success-icon-wrap">
                         <i class="fas fa-check"></i>
                     </div>
                     <div class="success-text-wrap">
                         <h4>অনুদানের তথ্য সফলভাবে জমা হয়েছে</h4>
-                        <p>আপনার তথ্য এডমিন যাচাইয়ের জন্য পাঠানো হয়েছে। খুব শীঘ্রই এটি গ্রহণ করা হবে। ধন্যবাদ আপনার
-                            সহায়তার জন্য।</p>
+                        <p>আপনার তথ্য এডমিন যাচাইয়ের জন্য পাঠানো হয়েছে। খুব শীঘ্রই এটি গ্রহণ করা হবে। ধন্যবাদ আপনার সহায়তার জন্য।</p>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <!-- About Section -->
         <div id="about-sec" class="hidden fade-in">
             <div class="glass-card">
-                <!-- Section Intro -->
                 <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; border-bottom: none; padding-bottom: 0;">
                     <i class="fas fa-info-circle"></i> আমাদের লক্ষ্য
                 </h3>
-
                 <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px;">
-                    এই ডোনেশন প্ল্যাটফর্মের মাধ্যমে সদস্যদের ছোট ছোট দানের মাধ্যমে একটি সহায়তা তহবিল তৈরি করা হয়। এই
-                    তহবিল অসহায় মানুষের চিকিৎসা, খাদ্য ও জরুরি সহায়তার জন্য ব্যবহার করা হয়।
+                    এই ডোনেশন প্ল্যাটফর্মের মাধ্যমে সদস্যদের ছোট ছোট দানের মাধ্যমে একটি সহায়তা তহবিল তৈরি করা হয়। এই তহবিল অসহায় মানুষের চিকিৎসা, খাদ্য ও জরুরি সহায়তার জন্য ব্যবহার করা হয়।
                 </p>
-
                 <div style="background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--primary); margin-bottom: 24px; font-size: 0.9rem; line-height: 1.6; border: 1px solid var(--border-light);">
-                    <strong style="color: var(--primary); font-weight: 700;">স্বচ্ছতা:</strong> প্রতিটি দানের হিসাব সকল
-                    সদস্য লাইভ দেখতে পারেন। এতে সকলের মধ্যে বিশ্বাস ও স্বচ্ছতা বজায় থাকে।
+                    <strong style="color: var(--primary); font-weight: 700;">স্বচ্ছতা:</strong> প্রতিটি দানের হিসাব সকল সদস্য লাইভ দেখতে পারেন। এতে সকলের মধ্যে বিশ্বাস ও স্বচ্ছতা বজায় থাকে।
                 </div>
-
             </div>
         </div>
+
+    </div><!-- /.container -->
 
     <nav class="nav-bar" role="navigation" aria-label="প্রধান নেভিগেশন">
         <button class="nav-link active" data-tab="home" aria-label="হোম" title="হোম">
@@ -275,750 +249,441 @@
             <i class="fas fa-circle-info"></i>
             <span>তথ্য</span>
         </button>
-
     </nav>
 
-    
-    <!-- JS -->
-     <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getDatabase, ref, onValue, push, off } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+   <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, onValue, push, off } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-    const firebaseConfig = {
-        databaseURL: "https://manobotar-shonchoy-default-rtdb.firebaseio.com"
-    };
+const firebaseConfig = {
+    apiKey: "AIzaSyBIg_HkTCHL3KwtSdAZYv73XMpfj3k5HmA",
+    authDomain: "manobotar-shonchoy.firebaseapp.com",
+    databaseURL: "https://manobotar-shonchoy-default-rtdb.firebaseio.com",
+    projectId: "manobotar-shonchoy",
+    storageBucket: "manobotar-shonchoy.firebasestorage.app",
+    messagingSenderId: "468892204030",
+    appId: "1:468892204030:web:e8657b033d72e9ed315eaf"
+};
 
-    const UI_RETENTION_DAYS = 400;
+const UI_RETENTION_DAYS = 400;
 
-    let app, db;
-    let listeners = [];
-    let settingsListener = null;
+let app, db;
+let listeners = [];
+let settingsListener = null;
 
-    const AppState = {
-        memberSavings: 0,
-        outsideDonations: 0,
-        bkashDonations: 0,
-        totalExpenses: 0,
-        activeTransactionFilter: 'all',
-        transactions: [],
-        expensesRaw: [],
-        expenseCategories: {},
-        expenseCategoryCounts: {}
-    };
+const AppState = {
+    memberSavings: 0,
+    outsideDonations: 0,
+    bkashDonations: 0,
+    totalExpenses: 0,
+    activeTransactionFilter: 'all',
+    transactions: [],
+    expensesRaw: [],
+    expenseCategories: {},
+    expenseCategoryCounts: {}
+};
 
-    /* =========================
-       WELCOME SCREEN
-    ========================= */
-    function injectWelcomeScreenStyles() {
-        if (document.getElementById('welcome-screen-style')) return;
+/* ========================= WELCOME SCREEN ========================= */
+function injectWelcomeScreenStyles() {
+    if (document.getElementById('welcome-screen-style')) return;
+    const style = document.createElement('style');
+    style.id = 'welcome-screen-style';
+    style.textContent = `
+        .welcome-screen-overlay{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(circle at top left, rgba(37,99,235,.22), transparent 34%),radial-gradient(circle at bottom right, rgba(124,58,237,.20), transparent 30%),linear-gradient(135deg, #eff6ff 0%, #f8fafc 45%, #eef2ff 100%);overflow:hidden;transition:opacity .45s ease, visibility .45s ease;}
+        .welcome-screen-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+        .welcome-screen-overlay::before,.welcome-screen-overlay::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(10px);opacity:.18;}
+        .welcome-screen-overlay::before{width:280px;height:280px;top:-80px;left:-80px;background:var(--primary);}
+        .welcome-screen-overlay::after{width:220px;height:220px;right:-70px;bottom:-70px;background:var(--secondary);}
+        .welcome-screen-card{position:relative;width:min(100%, 600px);background:rgba(255,255,255,.88);border:1px solid rgba(37,99,235,.12);border-radius:30px;padding:36px 28px 30px;text-align:center;box-shadow:0 25px 80px rgba(37,99,235,.14);animation:welcomePopIn .55s ease;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);}
+        .welcome-top-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(37,99,235,.08);color:var(--primary-dark);border:1px solid rgba(37,99,235,.12);font-size:.88rem;font-weight:700;margin-bottom:18px;}
+        .welcome-logo-wrap{width:110px;height:110px;margin:0 auto 18px;border-radius:28px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, rgba(37,99,235,.10), rgba(124,58,237,.10));border:2px dashed rgba(37,99,235,.25);box-shadow:0 14px 35px rgba(37,99,235,.12);overflow:hidden;}
+        .welcome-logo-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+        .welcome-title{margin:0 0 12px;font-size:clamp(1.1rem, 3vw, 2.3rem);line-height:1.2;font-weight:800;color:var(--primary-dark);letter-spacing:-.02em;}
+        .welcome-text{max-width:500px;margin:0 auto;font-size:1rem;line-height:1.8;color:#475569;font-weight:500;}
+        .welcome-highlight{color:var(--secondary);font-weight:800;}
+        .welcome-loader{width:180px;height:8px;margin:24px auto 12px;border-radius:999px;overflow:hidden;background:rgba(37,99,235,.10);position:relative;}
+        .welcome-loader span{position:absolute;inset:0;width:42%;border-radius:999px;background:linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));animation:welcomeLoading 1.35s ease-in-out infinite;}
+        .welcome-small{font-size:.9rem;color:#64748b;font-weight:600;}
+        @keyframes welcomePopIn{from{opacity:0;transform:translateY(16px) scale(.96);}to{opacity:1;transform:translateY(0) scale(1);}}
+        @keyframes welcomeLoading{0%{transform:translateX(-120%);}100%{transform:translateX(320%);}}
+        @media (max-width: 640px){.welcome-screen-card{padding:28px 18px 24px;border-radius:24px;}}
+    `;
+    document.head.appendChild(style);
+}
 
-        const style = document.createElement('style');
-        style.id = 'welcome-screen-style';
-        style.textContent = `
-            .welcome-screen-overlay{
-                position:fixed;
-                inset:0;
-                z-index:999999;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                padding:24px;
-                background:
-                    radial-gradient(circle at top left, rgba(37,99,235,.22), transparent 34%),
-                    radial-gradient(circle at bottom right, rgba(124,58,237,.20), transparent 30%),
-                    linear-gradient(135deg, #eff6ff 0%, #f8fafc 45%, #eef2ff 100%);
-                overflow:hidden;
-                transition:opacity .45s ease, visibility .45s ease;
-            }
+function ensureWelcomeScreen() {
+    injectWelcomeScreenStyles();
+    let overlay = document.getElementById('welcome-screen-overlay');
+    if (overlay) return overlay;
+    overlay = document.createElement('div');
+    overlay.id = 'welcome-screen-overlay';
+    overlay.className = 'welcome-screen-overlay';
+    overlay.innerHTML = `
+        <div class="welcome-screen-card">
+            <div class="welcome-top-badge"><i class="fas fa-heart"></i><span>স্বাগতম</span></div>
+            <div class="welcome-logo-wrap"><img src="assets/images/LOGO-HYO.png" alt="লোগো"></div>
+            <h1 class="welcome-title">হিয়াতপুর ইয়ুথ অরর্গানাইজেশন</h1>
+            <p class="welcome-text">আপনার <span class="welcome-highlight">দান, সহযোগিতা এবং সমর্থন</span> আমাদের মানবিক কার্যক্রমকে আরও শক্তিশালী করে। কিছুক্ষণের মধ্যেই ওয়েবসাইটের সকল তথ্য আপনার সামনে লোড হয়ে যাবে।</p>
+            <div class="welcome-loader"><span></span></div>
+            <div class="welcome-small">ডাটা লোড হচ্ছে, অনুগ্রহ করে একটু অপেক্ষা করুন...</div>
+        </div>`;
+    document.body.appendChild(overlay);
+    return overlay;
+}
 
-            .welcome-screen-overlay.hidden{
-                opacity:0;
-                visibility:hidden;
-                pointer-events:none;
-            }
+function showWelcomeScreen() {
+    const overlay = ensureWelcomeScreen();
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => { overlay.classList.remove('hidden'); });
+}
 
-            .welcome-screen-overlay::before,
-            .welcome-screen-overlay::after{
-                content:"";
-                position:absolute;
-                border-radius:50%;
-                pointer-events:none;
-                filter:blur(10px);
-                opacity:.18;
-            }
+function hideWelcomeScreen() {
+    const overlay = document.getElementById('welcome-screen-overlay');
+    if (!overlay) return;
+    overlay.classList.add('hidden');
+    document.body.style.overflow = '';
+    document.body.removeAttribute('style');
+    setTimeout(() => {
+        if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    }, 500);
+}
 
-            .welcome-screen-overlay::before{
-                width:280px;
-                height:280px;
-                top:-80px;
-                left:-80px;
-                background:var(--primary);
-            }
-
-            .welcome-screen-overlay::after{
-                width:220px;
-                height:220px;
-                right:-70px;
-                bottom:-70px;
-                background:var(--secondary);
-            }
-
-            .welcome-screen-card{
-                position:relative;
-                width:min(100%, 600px);
-                background:rgba(255,255,255,.88);
-                border:1px solid rgba(37,99,235,.12);
-                border-radius:30px;
-                padding:36px 28px 30px;
-                text-align:center;
-                box-shadow:0 25px 80px rgba(37,99,235,.14);
-                animation:welcomePopIn .55s ease;
-                backdrop-filter:blur(10px);
-                -webkit-backdrop-filter:blur(10px);
-            }
-
-            .welcome-top-badge{
-                display:inline-flex;
-                align-items:center;
-                gap:8px;
-                padding:8px 14px;
-                border-radius:999px;
-                background:rgba(37,99,235,.08);
-                color:var(--primary-dark);
-                border:1px solid rgba(37,99,235,.12);
-                font-size:.88rem;
-                font-weight:700;
-                margin-bottom:18px;
-            }
-
-            .welcome-logo-wrap{
-                width:110px;
-                height:110px;
-                margin:0 auto 18px;
-                border-radius:28px;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                background:linear-gradient(135deg, rgba(37,99,235,.10), rgba(124,58,237,.10));
-                border:2px dashed rgba(37,99,235,.25);
-                box-shadow:0 14px 35px rgba(37,99,235,.12);
-                overflow:hidden;
-            }
-
-            .welcome-logo-wrap img{
-                width:100%;
-                height:100%;
-                object-fit:cover;
-                display:block;
-            }
-
-            .welcome-title{
-                margin:0 0 12px;
-                font-size:clamp(1.1rem, 3vw, 2.3rem);
-                line-height:1.2;
-                font-weight:800;
-                color:var(--primary-dark);
-                letter-spacing:-.02em;
-            }
-
-            .welcome-text{
-                max-width:500px;
-                margin:0 auto;
-                font-size:1rem;
-                line-height:1.8;
-                color:#475569;
-                font-weight:500;
-            }
-
-            .welcome-highlight{
-                color:var(--secondary);
-                font-weight:800;
-            }
-
-            .welcome-loader{
-                width:180px;
-                height:8px;
-                margin:24px auto 12px;
-                border-radius:999px;
-                overflow:hidden;
-                background:rgba(37,99,235,.10);
-                position:relative;
-            }
-
-            .welcome-loader span{
-                position:absolute;
-                inset:0;
-                width:42%;
-                border-radius:999px;
-                background:linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-                animation:welcomeLoading 1.35s ease-in-out infinite;
-            }
-
-            .welcome-small{
-                font-size:.9rem;
-                color:#64748b;
-                font-weight:600;
-            }
-
-            @keyframes welcomePopIn{
-                from{
-                    opacity:0;
-                    transform:translateY(16px) scale(.96);
-                }
-                to{
-                    opacity:1;
-                    transform:translateY(0) scale(1);
-                }
-            }
-
-            @keyframes welcomeLoading{
-                0%{
-                    transform:translateX(-120%);
-                }
-                100%{
-                    transform:translateX(320%);
-                }
-            }
-
-            @media (max-width: 640px){
-                .welcome-screen-card{
-                    padding:28px 18px 24px;
-                    border-radius:24px;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    function ensureWelcomeScreen() {
-        injectWelcomeScreenStyles();
-
-        let overlay = document.getElementById('welcome-screen-overlay');
-        if (overlay) return overlay;
-
-        overlay = document.createElement('div');
-        overlay.id = 'welcome-screen-overlay';
-        overlay.className = 'welcome-screen-overlay';
-        overlay.innerHTML = `
-            <div class="welcome-screen-card">
-                <div class="welcome-top-badge">
-                    <i class="fas fa-heart"></i>
-                    <span>স্বাগতম</span>
-                </div>
-
-                <div class="welcome-logo-wrap">
-                    <img src="file_0000000073b071fab851104063c48aa9.png" alt="লোগো">
-                </div>
-
-                <h1 class="welcome-title">হিয়াতপুর ইয়ুথ অরর্গানাইজেশন</h1>
-
-                <p class="welcome-text">
-                    আপনার <span class="welcome-highlight">দান, সহযোগিতা এবং সমর্থন</span> আমাদের মানবিক কার্যক্রমকে আরও শক্তিশালী করে।
-                    কিছুক্ষণের মধ্যেই ওয়েবসাইটের সকল তথ্য আপনার সামনে লোড হয়ে যাবে।
-                </p>
-
-                <div class="welcome-loader">
-                    <span></span>
-                </div>
-
-                <div class="welcome-small">ডাটা লোড হচ্ছে, অনুগ্রহ করে একটু অপেক্ষা করুন...</div>
-            </div>
-        `;
-
-        document.body.appendChild(overlay);
-        return overlay;
-    }
-
-    function showWelcomeScreen() {
-        const overlay = ensureWelcomeScreen();
-        document.body.style.overflow = 'hidden';
-        requestAnimationFrame(() => {
-            overlay.classList.remove('hidden');
-        });
-    }
-
-    function hideWelcomeScreen() {
-        const overlay = document.getElementById('welcome-screen-overlay');
-        if (!overlay) return;
-
-        overlay.classList.add('hidden');
-        document.body.style.overflow = '';
-        document.body.removeAttribute('style');
-
-        setTimeout(() => {
-            if (overlay && overlay.parentNode) {
-                overlay.parentNode.removeChild(overlay);
-            }
-        }, 500);
-    }
-
-    function shouldShowWelcomeScreen() {
-        try {
-            const skipBySession = sessionStorage.getItem('skipWelcomeOnce') === 'true';
-            if (skipBySession) {
-                sessionStorage.removeItem('skipWelcomeOnce');
-                return false;
-            }
-        } catch (err) {
-            console.warn('Session storage unavailable:', err);
-        }
-
-        const referrer = (document.referrer || '').toLowerCase();
-        if (referrer.includes('saving.html')) {
+function shouldShowWelcomeScreen() {
+    try {
+        const skipBySession = sessionStorage.getItem('skipWelcomeOnce') === 'true';
+        if (skipBySession) {
+            sessionStorage.removeItem('skipWelcomeOnce');
             return false;
         }
-
-        return true;
-    }
-
-    function startWelcomeScreenTimer(duration = 5000) {
-        if (!shouldShowWelcomeScreen()) {
-            hideWelcomeScreen();
-            return;
-        }
-
-        showWelcomeScreen();
-        setTimeout(() => {
-            hideWelcomeScreen();
-        }, duration);
-    }
-
-    /* =========================
-       IN-PAGE NOTICE SYSTEM
-    ========================= */
-    function injectNoticeStyles() {
-        if (document.getElementById('in-page-notice-style')) return;
-
-        const style = document.createElement('style');
-        style.id = 'in-page-notice-style';
-        style.textContent = `
-        .page-inline-notice-wrap{
-            width:100%;
-            margin:12px 0 16px;
-        }
-        .page-inline-notice{
-            display:flex;
-            align-items:flex-start;
-            gap:10px;
-            padding:12px 14px;
-            border-radius:14px;
-            font-size:.94rem;
-            line-height:1.5;
-            font-weight:600;
-            border:1px solid transparent;
-            box-shadow:0 8px 24px rgba(15,23,42,.06);
-            animation:fadeSlideIn .22s ease;
-        }
-        .page-inline-notice.hidden{
-            display:none !important;
-        }
-        .page-inline-notice i{
-            margin-top:2px;
-            font-size:1rem;
-            flex-shrink:0;
-        }
-        .page-inline-notice.success{
-            background:#ecfdf5;
-            color:#166534;
-            border-color:#bbf7d0;
-        }
-        .page-inline-notice.error{
-            background:#fef2f2;
-            color:#991b1b;
-            border-color:#fecaca;
-        }
-        .page-inline-notice.warning{
-            background:#fffbeb;
-            color:#92400e;
-            border-color:#fde68a;
-        }
-        .page-inline-notice.info{
-            background:#eff6ff;
-            color:#1d4ed8;
-            border-color:#bfdbfe;
-        }
-
-         .field-inline-message{
-           margin-top:8px;
-           margin-bottom:16px; 
-           padding:10px 12px;
-           border-radius:12px;
-           font-size:.88rem;
-           font-weight:600;
-           display:flex;
-           align-items:flex-start;
-           gap:8px;
-           line-height:1.45;
-           animation:fadeSlideIn .2s ease;
-        }
-        .field-inline-message.hidden{
-            display:none !important;
-        }
-        .field-inline-message.error{
-            background:#fef2f2;
-            color:#b91c1c;
-            border:1px solid #fecaca;
-        }
-        .field-inline-message.success{
-            background:#ecfdf5;
-            color:#15803d;
-            border:1px solid #bbf7d0;
-        }
-        .field-inline-message.info{
-            background:#eff6ff;
-            color:#1d4ed8;
-            border:1px solid #bfdbfe;
-        }
-
-        .input-error-state{
-            border-color:#ef4444 !important;
-            box-shadow:0 0 0 3px rgba(239,68,68,.12) !important;
-        }
-        .input-success-state{
-            border-color:#22c55e !important;
-            box-shadow:0 0 0 3px rgba(34,197,94,.10) !important;
-        }
-
-        @keyframes fadeSlideIn{
-            from{opacity:0; transform:translateY(6px);}
-            to{opacity:1; transform:translateY(0);}
-        }
-    `;
-        document.head.appendChild(style);
-    }
-
-    function ensureGlobalNoticeBox() {
-        injectNoticeStyles();
-
-        let wrap = document.getElementById('page-inline-notice-wrap');
-        if (wrap) return wrap;
-
-        const container = document.querySelector('.container') || document.body;
-        wrap = document.createElement('div');
-        wrap.id = 'page-inline-notice-wrap';
-        wrap.className = 'page-inline-notice-wrap';
-        wrap.innerHTML = `
-        <div id="page-inline-notice" class="page-inline-notice hidden info">
-            <i class="fas fa-circle-info"></i>
-            <div id="page-inline-notice-text"></div>
-        </div>
-    `;
-
-        container.insertBefore(wrap, container.firstChild);
-        return wrap;
-    }
-
-    let globalNoticeTimeout = null;
-    function showPageNotice(message, type = 'info', autoHide = true) {
-        const wrap = ensureGlobalNoticeBox();
-        const box = wrap.querySelector('#page-inline-notice');
-        const text = wrap.querySelector('#page-inline-notice-text');
-
-        if (!box || !text) return;
-
-        if (globalNoticeTimeout) {
-            clearTimeout(globalNoticeTimeout);
-            globalNoticeTimeout = null;
-        }
-
-        box.className = `page-inline-notice ${type}`;
-        text.textContent = message;
-        box.classList.remove('hidden');
-
-        box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-        if (autoHide) {
-            globalNoticeTimeout = setTimeout(() => {
-                box.classList.add('hidden');
-                globalNoticeTimeout = null;
-            }, 4500);
-        }
-    }
-
-    function hidePageNotice() {
-        const box = document.getElementById('page-inline-notice');
-        if (box) box.classList.add('hidden');
-        if (globalNoticeTimeout) {
-            clearTimeout(globalNoticeTimeout);
-            globalNoticeTimeout = null;
-        }
-    }
-
-    function ensureFieldMessage(inputEl) {
-        if (!inputEl) return null;
-        injectNoticeStyles();
-
-        let msg = inputEl.parentElement?.querySelector('.field-inline-message');
-        if (msg) return msg;
-
-        msg = document.createElement('div');
-        msg.className = 'field-inline-message hidden';
-        inputEl.insertAdjacentElement('afterend', msg);
-        return msg;
-    }
-
-    function showFieldMessage(inputEl, message, type = 'error') {
-        if (!inputEl) return;
-        const msg = ensureFieldMessage(inputEl);
-        if (!msg) return;
-
-        msg.className = `field-inline-message ${type}`;
-        msg.innerHTML = `<i class="fas ${type === 'error' ? 'fa-circle-exclamation' : type === 'success' ? 'fa-circle-check' : 'fa-circle-info'}"></i><span>${message}</span>`;
-        msg.classList.remove('hidden');
-
-        inputEl.classList.remove('input-error-state', 'input-success-state');
-        inputEl.classList.add(type === 'error' ? 'input-error-state' : 'input-success-state');
-    }
-
-    function hideFieldMessage(inputEl) {
-        if (!inputEl) return;
-        const msg = inputEl.parentElement?.querySelector('.field-inline-message');
-        if (msg) msg.classList.add('hidden');
-        inputEl.classList.remove('input-error-state', 'input-success-state');
-    }
-
-    function clearDonationFieldMessages() {
-        hideFieldMessage(document.getElementById('don-name'));
-        hideFieldMessage(document.getElementById('don-amt'));
-    }
-
-    /* =========================
-       CORE HELPERS
-    ========================= */
-    function sanitizeText(text) {
-        return (text || "").toString().trim();
-    }
-
-    function formatCurrency(amount) {
-        const num = parseInt(amount) || 0;
-        return `৳ ${num.toLocaleString('bn-BD')}`;
-    }
-
-    function toEnglishDigits(value) {
-        const map = {
-            '০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4',
-            '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9'
-        };
-        return (value || "").toString().replace(/[০-৯]/g, d => map[d] || d);
-    }
-
-    function parseBanglaOrLocalDate(dateStr) {
-        if (!dateStr) return null;
-
-        let raw = sanitizeText(dateStr);
-        if (!raw) return null;
-
-        raw = toEnglishDigits(raw)
-            .replace(/\u09F3/g, '')
-            .replace(/[|]/g, '/')
-            .replace(/\./g, '/')
-            .replace(/-/g, '/')
-            .replace(/\s+/g, ' ')
-            .trim();
-
-        const lower = raw.toLowerCase();
-
-        if (
-            lower.includes('সম্প্রতি') ||
-            lower.includes('চলতি মাস') ||
-            lower.includes('today') ||
-            lower.includes('recent')
-        ) {
-            return new Date();
-        }
-
-        let d = new Date(raw);
-        if (!isNaN(d.getTime()) && d.getFullYear() > 1970) return d;
-
-        const parts = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
-        if (parts) {
-            let day = parseInt(parts[1], 10);
-            let month = parseInt(parts[2], 10);
-            let year = parseInt(parts[3], 10);
-
-            if (year < 100) year += 2000;
-
-            if (day > 0 && day <= 31 && month > 0 && month <= 12) {
-                d = new Date(year, month - 1, day);
-                if (!isNaN(d.getTime())) return d;
-            }
-
-            if (month > 0 && month <= 31 && day > 0 && day <= 12) {
-                d = new Date(year, day - 1, month);
-                if (!isNaN(d.getTime())) return d;
-            }
-        }
-
-        return null;
-    }
-
-    function getItemTimestamp(item) {
-        if (!item) return 0;
-
-        const candidates = [
-            item.timestamp,
-            item.createdAt,
-            item.updatedAt,
-            item.date
-        ];
-
-        for (const candidate of candidates) {
-            if (!candidate) continue;
-
-            if (typeof candidate === 'number' && !isNaN(candidate)) {
-                return candidate;
-            }
-
-            const nativeDate = new Date(candidate);
-            if (!isNaN(nativeDate.getTime())) {
-                return nativeDate.getTime();
-            }
-
-            const parsedLocal = parseBanglaOrLocalDate(candidate);
-            if (parsedLocal && !isNaN(parsedLocal.getTime())) {
-                return parsedLocal.getTime();
-            }
-        }
-
-        return 0;
-    }
-
-    function getCutoffTimestamp(days = UI_RETENTION_DAYS) {
-        const now = new Date();
-        now.setHours(23, 59, 59, 999);
-        now.setDate(now.getDate() - days);
-        return now.getTime();
-    }
-
-    function getRecentItems(items = [], days = UI_RETENTION_DAYS) {
-        const cutoff = getCutoffTimestamp(days);
-
-        return items.filter(item => {
-            const ts = getItemTimestamp(item);
-            if (!ts) return true;
-            return ts >= cutoff;
-        });
-    }
-
-    /* =========================
-       FIREBASE INIT
-    ========================= */
-    try {
-        app = initializeApp(firebaseConfig);
-        db = getDatabase(app);
     } catch (err) {
-        console.error("Firebase initialization failed:", err);
-        showPageNotice("সার্ভারে সংযোগ ব্যর্থ হয়েছে। পরে আবার চেষ্টা করুন।", "error", false);
+        console.warn('Session storage unavailable:', err);
+    }
+    const referrer = (document.referrer || '').toLowerCase();
+    if (referrer.includes('saving.html')) return false;
+    return true;
+}
+
+function startWelcomeScreenTimer(duration = 5000) {
+    if (!shouldShowWelcomeScreen()) {
+        hideWelcomeScreen();
+        return;
+    }
+    showWelcomeScreen();
+    setTimeout(() => {
+        hideWelcomeScreen();
+    }, duration);
+}
+
+/* ========================= IN-PAGE NOTICE SYSTEM ========================= */
+function injectNoticeStyles() {
+    if (document.getElementById('in-page-notice-style')) return;
+    const style = document.createElement('style');
+    style.id = 'in-page-notice-style';
+    style.textContent = `
+        .page-inline-notice-wrap{width:100%;margin:12px 0 16px;}
+        .page-inline-notice{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:14px;font-size:.94rem;line-height:1.5;font-weight:600;border:1px solid transparent;box-shadow:0 8px 24px rgba(15,23,42,.06);animation:fadeSlideIn .22s ease;}
+        .page-inline-notice.hidden{display:none !important;}
+        .page-inline-notice i{margin-top:2px;font-size:1rem;flex-shrink:0;}
+        .page-inline-notice.success{background:#ecfdf5;color:#166534;border-color:#bbf7d0;}
+        .page-inline-notice.error{background:#fef2f2;color:#991b1b;border-color:#fecaca;}
+        .page-inline-notice.warning{background:#fffbeb;color:#92400e;border-color:#fde68a;}
+        .page-inline-notice.info{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;}
+        .field-inline-message{margin-top:8px;margin-bottom:16px;padding:10px 12px;border-radius:12px;font-size:.88rem;font-weight:600;display:flex;align-items:flex-start;gap:8px;line-height:1.45;animation:fadeSlideIn .2s ease;}
+        .field-inline-message.hidden{display:none !important;}
+        .field-inline-message.error{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;}
+        .field-inline-message.success{background:#ecfdf5;color:#15803d;border:1px solid #bbf7d0;}
+        .field-inline-message.info{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;}
+        .input-error-state{border-color:#ef4444 !important;box-shadow:0 0 0 3px rgba(239,68,68,.12) !important;}
+        .input-success-state{border-color:#22c55e !important;box-shadow:0 0 0 3px rgba(34,197,94,.10) !important;}
+        @keyframes fadeSlideIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+    `;
+    document.head.appendChild(style);
+}
+
+function ensureGlobalNoticeBox() {
+    injectNoticeStyles();
+    let wrap = document.getElementById('page-inline-notice-wrap');
+    if (wrap) return wrap;
+    const container = document.querySelector('.container') || document.body;
+    wrap = document.createElement('div');
+    wrap.id = 'page-inline-notice-wrap';
+    wrap.className = 'page-inline-notice-wrap';
+    wrap.innerHTML = `<div id="page-inline-notice" class="page-inline-notice hidden info"><i class="fas fa-circle-info"></i><div id="page-inline-notice-text"></div></div>`;
+    container.insertBefore(wrap, container.firstChild);
+    return wrap;
+}
+
+let globalNoticeTimeout = null;
+
+function showPageNotice(message, type = 'info', autoHide = true) {
+    const wrap = ensureGlobalNoticeBox();
+    const box = wrap.querySelector('#page-inline-notice');
+    const text = wrap.querySelector('#page-inline-notice-text');
+    if (!box || !text) return;
+
+    if (globalNoticeTimeout) {
+        clearTimeout(globalNoticeTimeout);
+        globalNoticeTimeout = null;
     }
 
-    /* =========================
-       TRANSACTION FILTERS
-    ========================= */
-    function setupTransactionFilters() {
-        const transactionList = document.getElementById('detailed-acc-list');
-        if (!transactionList) return;
+    box.className = `page-inline-notice ${type}`;
+    text.textContent = message;
+    box.classList.remove('hidden');
+    box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-        let wrap = document.getElementById('transaction-filter-wrap');
+    if (autoHide) {
+        globalNoticeTimeout = setTimeout(() => {
+            box.classList.add('hidden');
+            globalNoticeTimeout = null;
+        }, 4500);
+    }
+}
 
-        if (!wrap) {
-            wrap = document.createElement('div');
-            wrap.className = 'transaction-filter-wrap';
-            wrap.id = 'transaction-filter-wrap';
-            wrap.innerHTML = `
+function hidePageNotice() {
+    const box = document.getElementById('page-inline-notice');
+    if (box) box.classList.add('hidden');
+    if (globalNoticeTimeout) {
+        clearTimeout(globalNoticeTimeout);
+        globalNoticeTimeout = null;
+    }
+}
+
+function ensureFieldMessage(inputEl) {
+    if (!inputEl) return null;
+    injectNoticeStyles();
+    let msg = inputEl.parentElement?.querySelector('.field-inline-message');
+    if (msg) return msg;
+
+    msg = document.createElement('div');
+    msg.className = 'field-inline-message hidden';
+    inputEl.insertAdjacentElement('afterend', msg);
+    return msg;
+}
+
+function showFieldMessage(inputEl, message, type = 'error') {
+    if (!inputEl) return;
+    const msg = ensureFieldMessage(inputEl);
+    if (!msg) return;
+
+    msg.className = `field-inline-message ${type}`;
+    msg.innerHTML = `<i class="fas ${type === 'error' ? 'fa-circle-exclamation' : type === 'success' ? 'fa-circle-check' : 'fa-circle-info'}"></i><span>${message}</span>`;
+    msg.classList.remove('hidden');
+
+    inputEl.classList.remove('input-error-state', 'input-success-state');
+    inputEl.classList.add(type === 'error' ? 'input-error-state' : 'input-success-state');
+}
+
+function hideFieldMessage(inputEl) {
+    if (!inputEl) return;
+    const msg = inputEl.parentElement?.querySelector('.field-inline-message');
+    if (msg) msg.classList.add('hidden');
+    inputEl.classList.remove('input-error-state', 'input-success-state');
+}
+
+function clearDonationFieldMessages() {
+    hideFieldMessage(document.getElementById('don-name'));
+    hideFieldMessage(document.getElementById('don-amt'));
+}
+
+/* ========================= CORE HELPERS ========================= */
+function sanitizeText(text) {
+    return (text || "").toString().trim();
+}
+
+function formatCurrency(amount) {
+    const num = parseInt(amount) || 0;
+    return `৳ ${num.toLocaleString('bn-BD')}`;
+}
+
+function toEnglishDigits(value) {
+    const map = { '০':'0','১':'1','২':'2','৩':'3','৪':'4','৫':'5','৬':'6','৭':'7','৮':'8','৯':'9' };
+    return (value || "").toString().replace(/[০-৯]/g, d => map[d] || d);
+}
+
+function parseBanglaOrLocalDate(dateStr) {
+    if (!dateStr) return null;
+    let raw = sanitizeText(dateStr);
+    if (!raw) return null;
+
+    raw = toEnglishDigits(raw)
+        .replace(/\u09F3/g, '')
+        .replace(/[|]/g, '/')
+        .replace(/\./g, '/')
+        .replace(/-/g, '/')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const lower = raw.toLowerCase();
+    if (
+        lower.includes('সম্প্রতি') ||
+        lower.includes('চলতি মাস') ||
+        lower.includes('today') ||
+        lower.includes('recent')
+    ) return new Date();
+
+    let d = new Date(raw);
+    if (!isNaN(d.getTime()) && d.getFullYear() > 1970) return d;
+
+    const parts = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+    if (parts) {
+        let day = parseInt(parts[1], 10);
+        let month = parseInt(parts[2], 10);
+        let year = parseInt(parts[3], 10);
+
+        if (year < 100) year += 2000;
+
+        if (day > 0 && day <= 31 && month > 0 && month <= 12) {
+            d = new Date(year, month - 1, day);
+            if (!isNaN(d.getTime())) return d;
+        }
+
+        if (month > 0 && month <= 31 && day > 0 && day <= 12) {
+            d = new Date(year, day - 1, month);
+            if (!isNaN(d.getTime())) return d;
+        }
+    }
+
+    return null;
+}
+
+function getItemTimestamp(item) {
+    if (!item) return 0;
+    const candidates = [item.timestamp, item.createdAt, item.updatedAt, item.date];
+
+    for (const candidate of candidates) {
+        if (!candidate) continue;
+
+        if (typeof candidate === 'number' && !isNaN(candidate)) return candidate;
+
+        const nativeDate = new Date(candidate);
+        if (!isNaN(nativeDate.getTime())) return nativeDate.getTime();
+
+        const parsedLocal = parseBanglaOrLocalDate(candidate);
+        if (parsedLocal && !isNaN(parsedLocal.getTime())) return parsedLocal.getTime();
+    }
+
+    return 0;
+}
+
+function getCutoffTimestamp(days = UI_RETENTION_DAYS) {
+    const now = new Date();
+    now.setHours(23, 59, 59, 999);
+    now.setDate(now.getDate() - days);
+    return now.getTime();
+}
+
+function getRecentItems(items = [], days = UI_RETENTION_DAYS) {
+    const cutoff = getCutoffTimestamp(days);
+    return items.filter(item => {
+        const ts = getItemTimestamp(item);
+        if (!ts) return true;
+        return ts >= cutoff;
+    });
+}
+
+/* ========================= FIREBASE INIT ========================= */
+try {
+    app = initializeApp(firebaseConfig);
+    db = getDatabase(app);
+} catch (err) {
+    console.error("Firebase initialization failed:", err);
+    showPageNotice("সার্ভারে সংযোগ ব্যর্থ হয়েছে। পরে আবার চেষ্টা করুন।", "error", false);
+}
+
+/* ========================= TRANSACTION FILTERS ========================= */
+function setupTransactionFilters() {
+    const transactionList = document.getElementById('detailed-acc-list');
+    if (!transactionList) return;
+
+    let wrap = document.getElementById('transaction-filter-wrap');
+    if (!wrap) {
+        wrap = document.createElement('div');
+        wrap.className = 'transaction-filter-wrap';
+        wrap.id = 'transaction-filter-wrap';
+        wrap.innerHTML = `
             <div class="transaction-filter-tabs" id="transaction-filter-tabs">
                 <button class="transaction-filter-btn active" data-filter="all">সব</button>
                 <button class="transaction-filter-btn" data-filter="member">সক্রিয় সদস্য</button>
                 <button class="transaction-filter-btn" data-filter="outside">বাইরের দান</button>
                 <button class="transaction-filter-btn" data-filter="mobile">বিকাশ/নগদ দান</button>
                 <button class="transaction-filter-btn" data-filter="expense">ব্যয়</button>
-            </div>
-        `;
-            transactionList.parentNode.insertBefore(wrap, transactionList);
-        }
-
-        const filterButtons = wrap.querySelectorAll('.transaction-filter-btn');
-        filterButtons.forEach(btn => {
-            if (btn.dataset.bound === 'true') return;
-
-            btn.dataset.bound = 'true';
-            btn.addEventListener('click', () => {
-                filterButtons.forEach(item => item.classList.remove('active'));
-                btn.classList.add('active');
-                AppState.activeTransactionFilter = btn.dataset.filter || 'all';
-                renderTransactionHistory();
-            });
-        });
-
-        filterButtons.forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === AppState.activeTransactionFilter);
-        });
+            </div>`;
+        transactionList.parentNode.insertBefore(wrap, transactionList);
     }
 
-    /* =========================
-       EXPENSE BREAKDOWN
-    ========================= */
-    function buildRecentExpenseStats() {
-        const recentExpenses = getRecentItems(AppState.expensesRaw, UI_RETENTION_DAYS);
-        const categories = {};
-        const counts = {};
+    const filterButtons = wrap.querySelectorAll('.transaction-filter-btn');
+    filterButtons.forEach(btn => {
+        if (btn.dataset.bound === 'true') return;
+        btn.dataset.bound = 'true';
 
-        recentExpenses.forEach(expense => {
-            const category = sanitizeText(expense.category || 'সাধারণ খরচ');
-            const amount = parseInt(expense.amount || 0);
-
-            categories[category] = (categories[category] || 0) + amount;
-            counts[category] = (counts[category] || 0) + 1;
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
+            AppState.activeTransactionFilter = btn.dataset.filter || 'all';
+            renderTransactionHistory();
         });
+    });
 
-        AppState.expenseCategories = categories;
-        AppState.expenseCategoryCounts = counts;
+    filterButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === AppState.activeTransactionFilter);
+    });
+}
+
+/* ========================= EXPENSE BREAKDOWN ========================= */
+function buildRecentExpenseStats() {
+    const recentExpenses = getRecentItems(AppState.expensesRaw, UI_RETENTION_DAYS);
+    const categories = {};
+    const counts = {};
+
+    recentExpenses.forEach(expense => {
+        const category = sanitizeText(expense.category || 'সাধারণ খরচ');
+        const amount = parseInt(expense.amount || 0);
+        categories[category] = (categories[category] || 0) + amount;
+        counts[category] = (counts[category] || 0) + 1;
+    });
+
+    AppState.expenseCategories = categories;
+    AppState.expenseCategoryCounts = counts;
+}
+
+function renderExpenseBreakdown() {
+    const container = document.getElementById('expense-breakdown-list');
+    if (!container) return;
+
+    buildRecentExpenseStats();
+
+    const categories = AppState.expenseCategories;
+    const counts = AppState.expenseCategoryCounts;
+    const categoryKeys = Object.keys(categories);
+    const recentExpenseTotal = Object.values(categories).reduce((sum, amount) => sum + (parseInt(amount) || 0), 0);
+
+    if (categoryKeys.length === 0) {
+        container.innerHTML = `<div class="no-data-msg"><i class="fas fa-info-circle" style="font-size: 1.5rem; opacity: 0.3; margin-bottom: 8px;"></i><p>নির্ধারিত সময়ের মধ্যে কোনো ব্যয়ের তথ্য নেই।</p></div>`;
+        return;
     }
 
-    function renderExpenseBreakdown() {
-        const container = document.getElementById('expense-breakdown-list');
-        if (!container) return;
+    const icons = {
+        'চিকিৎসা': 'fa-stethoscope',
+        'খাবার': 'fa-utensils',
+        'শিক্ষা': 'fa-book',
+        'পরিবহন': 'fa-bus',
+        'জরুরি': 'fa-triangle-exclamation',
+        'সাধারণ খরচ': 'fa-receipt'
+    };
 
-        buildRecentExpenseStats();
+    const sortedCategories = categoryKeys.sort((a, b) => (categories[b] || 0) - (categories[a] || 0));
+    let html = '';
 
-        const categories = AppState.expenseCategories;
-        const counts = AppState.expenseCategoryCounts;
-        const categoryKeys = Object.keys(categories);
-        const recentExpenseTotal = Object.values(categories).reduce((sum, amount) => sum + (parseInt(amount) || 0), 0);
+    sortedCategories.forEach(category => {
+        const amount = parseInt(categories[category] || 0);
+        const icon = icons[category] || 'fa-tag';
+        const txCount = counts[category] || 0;
+        const percent = recentExpenseTotal > 0 ? Math.round((amount / recentExpenseTotal) * 100) : 0;
 
-        if (categoryKeys.length === 0) {
-            container.innerHTML = `
-            <div class="no-data-msg">
-                <i class="fas fa-info-circle" style="font-size: 1.5rem; opacity: 0.3; margin-bottom: 8px;"></i>
-                <p>নির্ধারিত সময়ের মধ্যে কোনো ব্যয়ের তথ্য নেই।</p>
-            </div>
-        `;
-            return;
-        }
-
-        const icons = {
-            'চিকিৎসা': 'fa-stethoscope',
-            'খাবার': 'fa-utensils',
-            'শিক্ষা': 'fa-book',
-            'পরিবহন': 'fa-bus',
-            'জরুরি': 'fa-triangle-exclamation',
-            'সাধারণ খরচ': 'fa-receipt'
-        };
-
-        const sortedCategories = categoryKeys.sort((a, b) => (categories[b] || 0) - (categories[a] || 0));
-
-        let html = '';
-        sortedCategories.forEach(category => {
-            const amount = parseInt(categories[category] || 0);
-            const icon = icons[category] || 'fa-tag';
-            const txCount = counts[category] || 0;
-            const percent = recentExpenseTotal > 0 ? Math.round((amount / recentExpenseTotal) * 100) : 0;
-
-            html += `
+        html += `
             <div class="expense-row">
                 <div class="expense-label">
-                    <div class="expense-icon">
-                        <i class="fas ${icon}"></i>
-                    </div>
+                    <div class="expense-icon"><i class="fas ${icon}"></i></div>
                     <div class="expense-info">
                         <h5>${category}</h5>
                         <p>${txCount} লেনদেন</p>
@@ -1028,49 +693,41 @@
                     <strong>${formatCurrency(amount)}</strong>
                     <small>${percent}%</small>
                 </div>
-            </div>
-        `;
-        });
+            </div>`;
+    });
 
-        container.innerHTML = html;
+    container.innerHTML = html;
+}
+
+/* ========================= TRANSACTION HISTORY ========================= */
+function renderTransactionHistory() {
+    setupTransactionFilters();
+
+    const container = document.getElementById('detailed-acc-list');
+    if (!container) return;
+
+    const recentTransactions = getRecentItems(AppState.transactions, UI_RETENTION_DAYS)
+        .sort((a, b) => getItemTimestamp(b) - getItemTimestamp(a));
+
+    const activeFilter = AppState.activeTransactionFilter || 'all';
+
+    const filteredTransactions = activeFilter === 'all'
+        ? recentTransactions.filter(trans => trans.tagKey !== 'member')
+        : recentTransactions.filter(trans => (trans.tagKey || 'all') === activeFilter);
+
+    if (filteredTransactions.length === 0) {
+        container.innerHTML = `<div class="no-data-msg"><i class="fas fa-inbox" style="font-size: 1.5rem; opacity: 0.3; margin-bottom: 8px;"></i><p>এই সেকশনে কোনো লেনদেনের রেকর্ড নেই।</p></div>`;
+        return;
     }
 
-    /* =========================
-       TRANSACTION HISTORY
-    ========================= */
-    function renderTransactionHistory() {
-        setupTransactionFilters();
+    let html = '';
+    filteredTransactions.forEach(trans => {
+        const isIncome = trans.type === 'income';
+        const icon = isIncome ? 'fa-arrow-down' : 'fa-arrow-up';
+        const amountClass = isIncome ? 'success' : 'danger';
+        const amountSymbol = isIncome ? '+' : '-';
 
-        const container = document.getElementById('detailed-acc-list');
-        if (!container) return;
-
-        const recentTransactions = getRecentItems(AppState.transactions, UI_RETENTION_DAYS)
-            .sort((a, b) => getItemTimestamp(b) - getItemTimestamp(a));
-
-        const activeFilter = AppState.activeTransactionFilter || 'all';
-
-        const filteredTransactions = activeFilter === 'all'
-            ? recentTransactions.filter(trans => trans.tagKey !== 'member')
-            : recentTransactions.filter(trans => (trans.tagKey || 'all') === activeFilter);
-
-        if (filteredTransactions.length === 0) {
-            container.innerHTML = `
-            <div class="no-data-msg">
-                <i class="fas fa-inbox" style="font-size: 1.5rem; opacity: 0.3; margin-bottom: 8px;"></i>
-                <p>এই সেকশনে কোনো লেনদেনের রেকর্ড নেই।</p>
-            </div>
-        `;
-            return;
-        }
-
-        let html = '';
-        filteredTransactions.forEach(trans => {
-            const isIncome = trans.type === 'income';
-            const icon = isIncome ? 'fa-arrow-down' : 'fa-arrow-up';
-            const amountClass = isIncome ? 'success' : 'danger';
-            const amountSymbol = isIncome ? '+' : '-';
-
-            html += `
+        html += `
             <div class="transaction-item">
                 <div class="transaction-left">
                     <div class="trans-icon ${trans.type}">
@@ -1085,148 +742,137 @@
                     <strong>${amountSymbol} ${(parseInt(trans.amount) || 0).toLocaleString('bn-BD')}</strong>
                     <small>${sanitizeText(trans.tagName || '')}</small>
                 </div>
-            </div>
-        `;
-        });
+            </div>`;
+    });
 
-        container.innerHTML = html;
+    container.innerHTML = html;
+}
+
+/* ========================= UI UPDATE ========================= */
+function updateUI() {
+    const totalIncome = AppState.memberSavings + AppState.outsideDonations + AppState.bkashDonations;
+    const netBalance = totalIncome - AppState.totalExpenses;
+
+    const updateElement = (id, content) => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = content;
+    };
+
+    updateElement('total-s', formatCurrency(totalIncome));
+    updateElement('total-income-val', formatCurrency(totalIncome));
+    updateElement('total-expense-val', formatCurrency(AppState.totalExpenses));
+    updateElement('net-balance', formatCurrency(netBalance));
+    updateElement('m-savings-val', formatCurrency(AppState.memberSavings));
+    updateElement('o-donation-val', formatCurrency(AppState.outsideDonations));
+    updateElement('bkash-extra-val', formatCurrency(AppState.bkashDonations));
+    updateElement('grand-total-val', formatCurrency(totalIncome));
+
+    const goal = 10000;
+    const percentage = Math.min((totalIncome / goal) * 100, 100);
+
+    const progressBar = document.getElementById('progress-bar');
+    const percentText = document.getElementById('percent-text');
+    const remainingAmt = document.getElementById('remaining-amt');
+
+    if (progressBar) progressBar.style.width = percentage + '%';
+    if (percentText) percentText.innerText = Math.round(percentage) + '%';
+    if (remainingAmt) remainingAmt.innerText = Math.max(goal - totalIncome, 0).toLocaleString('bn-BD');
+
+    renderExpenseBreakdown();
+    renderTransactionHistory();
+}
+
+/* ========================= SETTINGS LISTENER ========================= */
+function initializeSettingsListener() {
+    if (!db) return;
+
+    if (settingsListener) {
+        try {
+            off(ref(db, 'settings'), 'value', settingsListener);
+        } catch (err) {
+            console.error(err);
+        }
     }
 
-    /* =========================
-       UI UPDATE
-    ========================= */
-    function updateUI() {
-        const totalIncome = AppState.memberSavings + AppState.outsideDonations + AppState.bkashDonations;
-        const netBalance = totalIncome - AppState.totalExpenses;
+    settingsListener = (snap) => {
+        try {
+            const settings = snap.val();
+            if (settings) {
+                const adminNumEl = document.getElementById('admin-num');
+                const noticeEl = document.getElementById('live-notice');
 
-        const updateElement = (id, content) => {
-            const el = document.getElementById(id);
-            if (el) el.innerHTML = content;
-        };
+                if (adminNumEl && settings.payment_num) adminNumEl.innerText = sanitizeText(settings.payment_num);
+                if (noticeEl && settings.notice) noticeEl.innerText = sanitizeText(settings.notice);
+            }
+        } catch (err) {
+            console.error("Error loading settings:", err);
+            showPageNotice("সেটিংস লোড করতে সমস্যা হয়েছে।", "warning");
+        }
+    };
 
-        updateElement('total-s', formatCurrency(totalIncome));
-        updateElement('total-income-val', formatCurrency(totalIncome));
-        updateElement('total-expense-val', formatCurrency(AppState.totalExpenses));
-        updateElement('net-balance', formatCurrency(netBalance));
-        updateElement('m-savings-val', formatCurrency(AppState.memberSavings));
-        updateElement('o-donation-val', formatCurrency(AppState.outsideDonations));
-        updateElement('bkash-extra-val', formatCurrency(AppState.bkashDonations));
-        updateElement('grand-total-val', formatCurrency(totalIncome));
+    const settingsRef = ref(db, 'settings');
+    onValue(settingsRef, settingsListener, (err) => {
+        console.error("Error fetching settings:", err);
+        showPageNotice("সেটিংস লোড করা যাচ্ছে না। পরে আবার চেষ্টা করুন।", "error");
+    });
 
-        const goal = 10000;
-        const percentage = Math.min((totalIncome / goal) * 100, 100);
-        const progressBar = document.getElementById('progress-bar');
-        const percentText = document.getElementById('percent-text');
-        const remainingAmt = document.getElementById('remaining-amt');
+    listeners.push({ path: 'settings', callback: settingsListener });
+}
 
-        if (progressBar) progressBar.style.width = percentage + '%';
-        if (percentText) percentText.innerText = Math.round(percentage) + '%';
-        if (remainingAmt) remainingAmt.innerText = Math.max(goal - totalIncome, 0).toLocaleString('bn-BD');
-
-        renderExpenseBreakdown();
-        renderTransactionHistory();
-    }
-
-    /* =========================
-       SETTINGS LISTENER
-    ========================= */
-    function initializeSettingsListener() {
-        if (!db) return;
-
-        if (settingsListener) {
+function clearDataListeners() {
+    listeners.forEach(({ path, callback }) => {
+        if (path !== 'settings') {
             try {
-                off(ref(db, 'settings'), 'value', settingsListener);
+                off(ref(db, path), 'value', callback);
             } catch (err) {
-                console.error("Error removing previous settings listener:", err);
+                console.error(`Error removing listener for ${path}:`, err);
             }
         }
+    });
 
-        settingsListener = (snap) => {
+    listeners = listeners.filter(l => l.path === 'settings');
+}
+
+/* ========================= DATA FETCH — CORRECTED PATHS ========================= */
+function fetchData() {
+    if (!db) return;
+
+    clearDataListeners();
+
+    const memberListDiv = document.getElementById('full-members-list');
+
+    const membersListener = (snap) => {
+        AppState.memberSavings = 0;
+        const memberTransactions = [];
+        let memberCount = 0;
+
+        if (memberListDiv) memberListDiv.innerHTML = '';
+
+        snap.forEach(child => {
             try {
-                const settings = snap.val();
-                if (settings) {
-                    const adminNumEl = document.getElementById('admin-num');
-                    const noticeEl = document.getElementById('live-notice');
+                const memberData = child.val();
+                if (!memberData) return;
 
-                    if (adminNumEl && settings.payment_num) {
-                        adminNumEl.innerText = sanitizeText(settings.payment_num);
-                    }
+                const amount = parseInt(memberData.totalPaid || 0);
+                const memberName = sanitizeText(memberData.name);
 
-                    if (noticeEl && settings.notice) {
-                        noticeEl.innerText = sanitizeText(settings.notice);
-                    }
-                }
-            } catch (err) {
-                console.error("Error loading settings:", err);
-                showPageNotice("সেটিংস লোড করতে সমস্যা হয়েছে।", "warning");
-            }
-        };
+                AppState.memberSavings += amount;
+                memberCount++;
 
-        const settingsRef = ref(db, 'settings');
-        onValue(settingsRef, settingsListener, (err) => {
-            console.error("Error fetching settings:", err);
-            showPageNotice("সেটিংস লোড করা যাচ্ছে না। পরে আবার চেষ্টা করুন।", "error");
-        });
+                memberTransactions.push({
+                    title: memberName,
+                    amount: amount,
+                    type: 'income',
+                    tagName: 'সদস্য সঞ্চয়',
+                    tagKey: 'member',
+                    tagClass: 'tag-savings',
+                    date: sanitizeText(memberData.lastPaidDate || memberData.date || memberData.joinDate || 'চলতি মাস'),
+                    timestamp: memberData.timestamp || memberData.lastPaidAt || memberData.updatedAt || Date.now()
+                });
 
-        listeners.push({ path: 'settings', callback: settingsListener });
-    }
-
-    function clearDataListeners() {
-        listeners.forEach(({ path, callback }) => {
-            if (path !== 'settings') {
-                try {
-                    off(ref(db, path), 'value', callback);
-                } catch (err) {
-                    console.error(`Error removing listener for ${path}:`, err);
-                }
-            }
-        });
-
-        listeners = listeners.filter(l => l.path === 'settings');
-    }
-
-    /* =========================
-       DATA FETCH
-    ========================= */
-    function fetchData() {
-        if (!db) return;
-
-        clearDataListeners();
-
-        const memberListDiv = document.getElementById('full-members-list');
-
-        const membersListener = (snap) => {
-            AppState.memberSavings = 0;
-            const memberTransactions = [];
-            let memberCount = 0;
-
-            if (memberListDiv) memberListDiv.innerHTML = '';
-
-            snap.forEach(child => {
-                try {
-                    const memberData = child.val();
-                    if (!memberData) return;
-
-                    const amount = parseInt(memberData.totalPaid || 0);
-                    const memberName = sanitizeText(memberData.name);
-
-                    AppState.memberSavings += amount;
-                    memberCount++;
-
-                    memberTransactions.push({
-                        title: memberName,
-                        amount: amount,
-                        type: 'income',
-                        tagName: 'সদস্য সঞ্চয়',
-                        tagKey: 'member',
-                        tagClass: 'tag-savings',
-                        date: sanitizeText(memberData.lastPaidDate || memberData.date || 'চলতি মাস'),
-                        timestamp: memberData.timestamp || memberData.lastPaidAt || memberData.updatedAt || Date.now()
-                    });
-
-                    if (memberListDiv) {
-                        const initials = memberName[0] || 'ব';
-                        memberListDiv.innerHTML += `
+                if (memberListDiv) {
+                    const initials = memberName[0] || 'ব';
+                    memberListDiv.innerHTML += `
                         <div class="member-info-card">
                             <div class="member-header">
                                 <div class="m-avatar">${initials}</div>
@@ -1241,629 +887,469 @@
                                 <div><span>সদস্যপদ</span><b>সক্রিয়</b></div>
                                 <div><span>যোগদান</span><b>${sanitizeText(memberData.joinDate || 'জানুয়ারি ২০২৪')}</b></div>
                             </div>
-                        </div>
-                    `;
-                    }
-                } catch (err) {
-                    console.error("Error processing member data:", err);
+                        </div>`;
                 }
-            });
+            } catch (err) {
+                console.error("Error processing member data:", err);
+            }
+        });
 
-            const totalMembersEl = document.getElementById('total-m');
-            if (totalMembersEl) totalMembersEl.innerText = memberCount;
+        const totalMembersEl = document.getElementById('total-m');
+        if (totalMembersEl) totalMembersEl.innerText = memberCount.toLocaleString('bn-BD');
 
-            rebuildTransactions({ memberTransactions });
-            updateUI();
-        };
-
-        const expensesListener = (snap) => {
-            AppState.totalExpenses = 0;
-            const expenseTransactions = [];
-            const expensesRaw = [];
-
-            snap.forEach(child => {
-                try {
-                    const expense = child.val();
-                    if (!expense) return;
-
-                    const amount = parseInt(expense.amount || 0);
-                    const category = sanitizeText(expense.category || 'সাধারণ খরচ');
-                    const reason = sanitizeText(expense.reason || 'ব্যয়');
-
-                    AppState.totalExpenses += amount;
-
-                    const normalizedExpense = {
-                        ...expense,
-                        amount,
-                        category,
-                        reason,
-                        date: sanitizeText(expense.date || 'সম্প্রতি'),
-                        timestamp: expense.timestamp || expense.createdAt || expense.updatedAt || 0
-                    };
-
-                    expensesRaw.push(normalizedExpense);
-
-                    expenseTransactions.push({
-                        title: reason,
-                        amount: amount,
-                        type: 'expense',
-                        tagName: 'ব্যয়',
-                        tagKey: 'expense',
-                        tagClass: 'tag-expense',
-                        date: normalizedExpense.date,
-                        note: category,
-                        timestamp: normalizedExpense.timestamp
-                    });
-                } catch (err) {
-                    console.error("Error processing expense data:", err);
-                }
-            });
-
-            AppState.expensesRaw = expensesRaw;
-            rebuildTransactions({ expenseTransactions });
-            updateUI();
-        };
-
-        const donationsListener = (snap) => {
-            AppState.outsideDonations = 0;
-            AppState.bkashDonations = 0;
-
-            const donationTransactions = [];
-
-            snap.forEach(child => {
-                try {
-                    const donation = child.val();
-                    if (!donation) return;
-
-                    const amount = parseInt(donation.amount || 0);
-                    const method = sanitizeText(donation.method || 'অন্যান্য').toLowerCase();
-                    const isMobileDonation = method === 'bkash' || method === 'nagad';
-
-                    if (isMobileDonation) {
-                        AppState.bkashDonations += amount;
-                    } else {
-                        AppState.outsideDonations += amount;
-                    }
-
-                    donationTransactions.push({
-                        title: sanitizeText(donation.name || 'অজানা দাতা'),
-                        amount: amount,
-                        type: 'income',
-                        tagName: isMobileDonation ? 'বিকাশ দান' : 'বাইরের দান',
-                        tagKey: isMobileDonation ? 'mobile' : 'outside',
-                        tagClass: 'tag-outside',
-                        date: sanitizeText(donation.date || 'সম্প্রতি'),
-                        timestamp: donation.timestamp || donation.createdAt || donation.updatedAt || 0
-                    });
-                } catch (err) {
-                    console.error("Error processing donation data:", err);
-                }
-            });
-
-            rebuildTransactions({ donationTransactions });
-            updateUI();
-        };
-
-        onValue(ref(db, 'charity_members'), membersListener);
-        onValue(ref(db, 'charity_expenses'), expensesListener);
-        onValue(ref(db, 'outside_donations'), donationsListener);
-
-        listeners.push({ path: 'charity_members', callback: membersListener });
-        listeners.push({ path: 'charity_expenses', callback: expensesListener });
-        listeners.push({ path: 'outside_donations', callback: donationsListener });
-    }
-
-    /* =========================
-       TRANSACTION REBUILD
-    ========================= */
-    const transactionBuckets = {
-        memberTransactions: [],
-        expenseTransactions: [],
-        donationTransactions: []
+        rebuildTransactions({ memberTransactions });
+        updateUI();
     };
 
-    function rebuildTransactions(updatedParts = {}) {
-        if (Array.isArray(updatedParts.memberTransactions)) {
-            transactionBuckets.memberTransactions = updatedParts.memberTransactions;
-        }
-        if (Array.isArray(updatedParts.expenseTransactions)) {
-            transactionBuckets.expenseTransactions = updatedParts.expenseTransactions;
-        }
-        if (Array.isArray(updatedParts.donationTransactions)) {
-            transactionBuckets.donationTransactions = updatedParts.donationTransactions;
-        }
+    const expensesListener = (snap) => {
+        AppState.totalExpenses = 0;
+        const expenseTransactions = [];
+        const expensesRaw = [];
 
-        AppState.transactions = [
-            ...transactionBuckets.memberTransactions,
-            ...transactionBuckets.expenseTransactions,
-            ...transactionBuckets.donationTransactions
-        ];
+        snap.forEach(child => {
+            try {
+                const expense = child.val();
+                if (!expense) return;
+
+                const amount = parseInt(expense.amount || 0);
+                const category = sanitizeText(expense.category || 'সাধারণ খরচ');
+                const reason = sanitizeText(expense.reason || 'ব্যয়');
+
+                AppState.totalExpenses += amount;
+
+                const normalizedExpense = {
+                    ...expense,
+                    amount,
+                    category,
+                    reason,
+                    date: sanitizeText(expense.date || 'সম্প্রতি'),
+                    timestamp: expense.timestamp || expense.createdAt || expense.updatedAt || 0
+                };
+
+                expensesRaw.push(normalizedExpense);
+
+                expenseTransactions.push({
+                    title: reason,
+                    amount: amount,
+                    type: 'expense',
+                    tagName: 'ব্যয়',
+                    tagKey: 'expense',
+                    tagClass: 'tag-expense',
+                    date: normalizedExpense.date,
+                    note: category,
+                    timestamp: normalizedExpense.timestamp
+                });
+            } catch (err) {
+                console.error("Error processing expense data:", err);
+            }
+        });
+
+        AppState.expensesRaw = expensesRaw;
+        rebuildTransactions({ expenseTransactions });
+        updateUI();
+    };
+
+    const donationsListener = (snap) => {
+        AppState.outsideDonations = 0;
+        AppState.bkashDonations = 0;
+        const donationTransactions = [];
+
+        snap.forEach(child => {
+            try {
+                const donation = child.val();
+                if (!donation) return;
+
+                const amount = parseInt(donation.amount || 0);
+                const method = sanitizeText(donation.method || 'অন্যান্য').toLowerCase();
+                const isMobileDonation = method === 'bkash' || method === 'nagad';
+
+                if (isMobileDonation) AppState.bkashDonations += amount;
+                else AppState.outsideDonations += amount;
+
+                donationTransactions.push({
+                    title: sanitizeText(donation.name || 'অজানা দাতা'),
+                    amount: amount,
+                    type: 'income',
+                    tagName: isMobileDonation ? 'বিকাশ দান' : 'বাইরের দান',
+                    tagKey: isMobileDonation ? 'mobile' : 'outside',
+                    tagClass: 'tag-outside',
+                    date: sanitizeText(donation.date || 'সম্প্রতি'),
+                    timestamp: donation.timestamp || donation.createdAt || donation.updatedAt || 0
+                });
+            } catch (err) {
+                console.error("Error processing donation data:", err);
+            }
+        });
+
+        rebuildTransactions({ donationTransactions });
+        updateUI();
+    };
+
+    onValue(ref(db, 'charity_members'), membersListener, (err) => {
+        console.error("Members load error:", err);
+        showPageNotice("সদস্যদের তথ্য লোড করা যাচ্ছে না।", "error");
+    });
+
+    onValue(ref(db, 'charity_expenses'), expensesListener, (err) => {
+        console.error("Expenses load error:", err);
+        showPageNotice("ব্যয়ের তথ্য লোড করা যাচ্ছে না।", "error");
+    });
+
+    onValue(ref(db, 'outside_donations'), donationsListener, (err) => {
+        console.error("Donations load error:", err);
+        showPageNotice("অনুদানের তথ্য লোড করা যাচ্ছে না।", "error");
+    });
+
+    listeners.push({ path: 'charity_members', callback: membersListener });
+    listeners.push({ path: 'charity_expenses', callback: expensesListener });
+    listeners.push({ path: 'outside_donations', callback: donationsListener });
+}
+
+/* ========================= TRANSACTION REBUILD ========================= */
+const transactionBuckets = {
+    memberTransactions: [],
+    expenseTransactions: [],
+    donationTransactions: []
+};
+
+function rebuildTransactions(updatedParts = {}) {
+    if (Array.isArray(updatedParts.memberTransactions)) {
+        transactionBuckets.memberTransactions = updatedParts.memberTransactions;
+    }
+    if (Array.isArray(updatedParts.expenseTransactions)) {
+        transactionBuckets.expenseTransactions = updatedParts.expenseTransactions;
+    }
+    if (Array.isArray(updatedParts.donationTransactions)) {
+        transactionBuckets.donationTransactions = updatedParts.donationTransactions;
     }
 
-    /* =========================
-       DONATION SUCCESS
-    ========================= */
-    let donationSuccessTimeout = null;
+    AppState.transactions = [
+        ...transactionBuckets.memberTransactions,
+        ...transactionBuckets.expenseTransactions,
+        ...transactionBuckets.donationTransactions
+    ];
+}
 
-    function showDonationSuccessBox() {
-        const successBox = document.getElementById('donation-success-box');
-        if (!successBox) return;
+/* ========================= DONATION SUCCESS ========================= */
+let donationSuccessTimeout = null;
 
-        if (donationSuccessTimeout) {
-            clearTimeout(donationSuccessTimeout);
-            donationSuccessTimeout = null;
-        }
+function showDonationSuccessBox() {
+    const successBox = document.getElementById('donation-success-box');
+    if (!successBox) return;
 
-        successBox.classList.remove('hidden');
-        successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-        donationSuccessTimeout = setTimeout(() => {
-            successBox.classList.add('hidden');
-            donationSuccessTimeout = null;
-        }, 5000);
+    if (donationSuccessTimeout) {
+        clearTimeout(donationSuccessTimeout);
+        donationSuccessTimeout = null;
     }
 
-    function hideDonationSuccessBox() {
-        const successBox = document.getElementById('donation-success-box');
-        if (!successBox) return;
+    successBox.classList.remove('hidden');
+    successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-        if (donationSuccessTimeout) {
-            clearTimeout(donationSuccessTimeout);
-            donationSuccessTimeout = null;
-        }
-
+    donationSuccessTimeout = setTimeout(() => {
         successBox.classList.add('hidden');
+        donationSuccessTimeout = null;
+    }, 5000);
+}
+
+function hideDonationSuccessBox() {
+    const successBox = document.getElementById('donation-success-box');
+    if (!successBox) return;
+
+    if (donationSuccessTimeout) {
+        clearTimeout(donationSuccessTimeout);
+        donationSuccessTimeout = null;
     }
 
-    /* =========================
-       DONATION MODAL
-    ========================= */
-    function ensureDonationModal() {
-        let modal = document.getElementById('donation-confirm-modal');
-        if (modal) return modal;
+    successBox.classList.add('hidden');
+}
 
-        if (!document.getElementById('donation-modal-style')) {
-            const style = document.createElement('style');
-            style.id = 'donation-modal-style';
-            style.textContent = `
-            .donation-modal-overlay {
-                position: fixed;
-                inset: 0;
-                background: rgba(15, 23, 42, 0.55);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                z-index: 99999;
-                animation: modalFadeIn .2s ease;
-            }
+/* ========================= DONATION MODAL ========================= */
+function ensureDonationModal() {
+    let modal = document.getElementById('donation-confirm-modal');
+    if (modal) return modal;
 
-            .donation-modal-overlay.hidden {
-                display: none !important;
-            }
-
-            .donation-modal-box {
-                width: 100%;
-                max-width: 420px;
-                background: #ffffff;
-                border-radius: 22px;
-                padding: 22px;
-                box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
-                border: 1px solid rgba(148, 163, 184, 0.18);
-                animation: modalScaleIn .22s ease;
-            }
-
-            .donation-modal-head {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                margin-bottom: 16px;
-            }
-
-            .donation-modal-icon {
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #2563eb, #06b6d4);
-                color: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.1rem;
-                flex-shrink: 0;
-            }
-
-            .donation-modal-head h3 {
-                margin: 0;
-                font-size: 1.05rem;
-                font-weight: 800;
-                color: #0f172a;
-            }
-
-            .donation-modal-head p {
-                margin: 3px 0 0;
-                font-size: .88rem;
-                color: #64748b;
-            }
-
-            .donation-modal-summary {
-                background: #f8fafc;
-                border: 1px solid rgba(148, 163, 184, 0.16);
-                border-radius: 16px;
-                padding: 14px;
-                margin-bottom: 18px;
-            }
-
-            .donation-modal-row {
-                display: flex;
-                justify-content: space-between;
-                gap: 12px;
-                padding: 8px 0;
-                border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-            }
-
-            .donation-modal-row:last-child {
-                border-bottom: none;
-            }
-
-            .donation-modal-row span {
-                color: #64748b;
-                font-size: .9rem;
-                font-weight: 600;
-            }
-              
-            .donation-modal-row strong {
-                color: #0f172a;
-                font-size: .95rem;
-                font-weight: 800;
-                text-align: right;
-                word-break: break-word;
-            }
-
-            .donation-modal-note {
-                font-size: .86rem;
-                line-height: 1.6;
-                color: #475569;
-                margin-bottom: 18px;
-            }
-
-            .donation-modal-actions {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-            }
-
-            .donation-modal-btn {
-                border: none;
-                border-radius: 14px;
-                padding: 13px 14px;
-                font-family: inherit;
-                font-size: .95rem;
-                font-weight: 800;
-                cursor: pointer;
-                transition: .2s ease;
-            }
-
-            .donation-modal-btn.cancel {
-                background: #eef2f7;
-                color: #334155;
-            }
-
-            .donation-modal-btn.confirm {
-                background: linear-gradient(135deg, #2563eb, #06b6d4);
-                color: white;
-                box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
-            }
-
-            .donation-modal-btn:hover {
-                transform: translateY(-1px);
-            }
-
-            @keyframes modalFadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-
-            @keyframes modalScaleIn {
-                from { opacity: 0; transform: scale(.96); }
-                to { opacity: 1; transform: scale(1); }
-            }
+    if (!document.getElementById('donation-modal-style')) {
+        const style = document.createElement('style');
+        style.id = 'donation-modal-style';
+        style.textContent = `
+            .donation-modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.55);display:flex;align-items:center;justify-content:center;padding:16px;z-index:99999;animation:modalFadeIn .2s ease;}
+            .donation-modal-overlay.hidden{display:none !important;}
+            .donation-modal-box{width:100%;max-width:420px;background:#ffffff;border-radius:22px;padding:22px;box-shadow:0 25px 60px rgba(15,23,42,.25);border:1px solid rgba(148,163,184,.18);animation:modalScaleIn .22s ease;}
+            .donation-modal-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+            .donation-modal-icon{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#06b6d4);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+            .donation-modal-head h3{margin:0;font-size:1.05rem;font-weight:800;color:#0f172a;}
+            .donation-modal-head p{margin:3px 0 0;font-size:.88rem;color:#64748b;}
+            .donation-modal-summary{background:#f8fafc;border:1px solid rgba(148,163,184,.16);border-radius:16px;padding:14px;margin-bottom:18px;}
+            .donation-modal-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid rgba(148,163,184,.12);}
+            .donation-modal-row:last-child{border-bottom:none;}
+            .donation-modal-row span{color:#64748b;font-size:.9rem;font-weight:600;}
+            .donation-modal-row strong{color:#0f172a;font-size:.95rem;font-weight:800;text-align:right;word-break:break-word;}
+            .donation-modal-note{font-size:.86rem;line-height:1.6;color:#475569;margin-bottom:18px;}
+            .donation-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+            .donation-modal-btn{border:none;border-radius:14px;padding:13px 14px;font-family:inherit;font-size:.95rem;font-weight:800;cursor:pointer;transition:.2s ease;}
+            .donation-modal-btn.cancel{background:#eef2f7;color:#334155;}
+            .donation-modal-btn.confirm{background:linear-gradient(135deg,#2563eb,#06b6d4);color:white;box-shadow:0 10px 24px rgba(37,99,235,.22);}
+            .donation-modal-btn:hover{transform:translateY(-1px);}
+            @keyframes modalFadeIn{from{opacity:0;}to{opacity:1;}}
+            @keyframes modalScaleIn{from{opacity:0;transform:scale(.96);}to{opacity:1;transform:scale(1);}}
         `;
-            document.head.appendChild(style);
-        }
+        document.head.appendChild(style);
+    }
 
-        modal = document.createElement('div');
-        modal.id = 'donation-confirm-modal';
-        modal.className = 'donation-modal-overlay hidden';
-        modal.innerHTML = `
+    modal = document.createElement('div');
+    modal.id = 'donation-confirm-modal';
+    modal.className = 'donation-modal-overlay hidden';
+    modal.innerHTML = `
         <div class="donation-modal-box">
             <div class="donation-modal-head">
-                <div class="donation-modal-icon">
-                    <i class="fas fa-circle-check"></i>
-                </div>
+                <div class="donation-modal-icon"><i class="fas fa-circle-check"></i></div>
                 <div>
                     <h3>তথ্য নিশ্চিত করুন</h3>
                     <p>নিচের তথ্যগুলো ঠিক আছে কি না দেখে নিন</p>
                 </div>
             </div>
-
             <div class="donation-modal-summary">
-                <div class="donation-modal-row">
-                    <span>আপনার নাম</span>
-                    <strong id="modal-donor-name">-</strong>
-                </div>
-                <div class="donation-modal-row">
-                    <span>টাকার পরিমাণ</span>
-                    <strong id="modal-donor-amount">-</strong>
-                </div>
+                <div class="donation-modal-row"><span>আপনার নাম</span><strong id="modal-donor-name">-</strong></div>
+                <div class="donation-modal-row"><span>টাকার পরিমাণ</span><strong id="modal-donor-amount">-</strong></div>
             </div>
-
-            <div class="donation-modal-note">
-                আপনি নিশ্চিত করলে এই তথ্যটি এডমিন প্যানেলে জমা হবে। পরে এডমিন যেকোনো সময় যাচাই ও approve করতে পারবে।
-            </div>
-
+            <div class="donation-modal-note">আপনি নিশ্চিত করলে এই তথ্যটি এডমিন প্যানেলে জমা হবে। পরে এডমিন যেকোনো সময় যাচাই ও approve করতে পারবে।</div>
             <div class="donation-modal-actions">
                 <button type="button" class="donation-modal-btn cancel" id="donation-cancel-btn">ফিরে যান</button>
                 <button type="button" class="donation-modal-btn confirm" id="donation-confirm-btn">হ্যাঁ, জমা দিন</button>
             </div>
-        </div>
-    `;
+        </div>`;
 
-        document.body.appendChild(modal);
+    document.body.appendChild(modal);
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-            }
-        });
-
-        const cancelBtn = modal.querySelector('#donation-cancel-btn');
-        if (cancelBtn) {
-            cancelBtn.addEventListener('click', () => {
-                modal.classList.add('hidden');
-            });
-        }
-
-        return modal;
-    }
-
-    function showDonationConfirmModal(name, amount, onConfirm) {
-        const modal = ensureDonationModal();
-        if (!modal) return;
-
-        const nameEl = document.getElementById('modal-donor-name');
-        const amountEl = document.getElementById('modal-donor-amount');
-        const oldConfirmBtn = document.getElementById('donation-confirm-btn');
-
-        if (nameEl) nameEl.textContent = name;
-        if (amountEl) amountEl.textContent = formatCurrency(amount);
-
-        if (oldConfirmBtn && oldConfirmBtn.parentNode) {
-            const newConfirmBtn = oldConfirmBtn.cloneNode(true);
-            oldConfirmBtn.parentNode.replaceChild(newConfirmBtn, oldConfirmBtn);
-
-            newConfirmBtn.addEventListener('click', async () => {
-                modal.classList.add('hidden');
-                await onConfirm();
-            });
-        }
-
-        modal.classList.remove('hidden');
-    }
-
-    /* =========================
-       SAVE DONATION
-    ========================= */
-    async function savePendingDonation(name, amount) {
-        if (!db) {
-            showPageNotice("ডেটাবেসে সংযোগ ব্যর্থ হয়েছে।", "error");
-            return;
-        }
-
-        const now = new Date();
-
-        const donationPayload = {
-            name,
-            amount,
-            status: "pending",
-            source: "website_form",
-            method: "pending",
-            reviewed: false,
-            adminReceived: false,
-            date: now.toLocaleDateString('bn-BD'),
-            time: now.toLocaleTimeString('bn-BD'),
-            timestamp: Date.now(),
-            createdAt: now.toISOString()
-        };
-
-        await push(ref(db, 'pending_donations'), donationPayload);
-    }
-
-    /* =========================
-       DONATION SUBMIT
-    ========================= */
-    AppState.submitDonation = () => {
-        const nameInput = document.getElementById('don-name');
-        const amountInput = document.getElementById('don-amt');
-
-        const name = sanitizeText(nameInput?.value || '');
-        const amount = parseInt(amountInput?.value || 0);
-
-        hideDonationSuccessBox();
-        hidePageNotice();
-        clearDonationFieldMessages();
-
-        let hasError = false;
-
-        if (!name) {
-            showFieldMessage(nameInput, "দয়া করে আপনার নাম লিখুন।", "error");
-            nameInput?.focus();
-            hasError = true;
-        }
-
-        if (!amount || amount <= 0) {
-            showFieldMessage(amountInput, "দয়া করে সঠিক টাকার পরিমাণ লিখুন।", "error");
-            if (!hasError) amountInput?.focus();
-            hasError = true;
-        }
-
-        if (hasError) return;
-
-        showDonationConfirmModal(name, amount, async () => {
-            try {
-                await savePendingDonation(name, amount);
-
-                if (nameInput) {
-                    nameInput.value = '';
-                    hideFieldMessage(nameInput);
-                }
-                if (amountInput) {
-                    amountInput.value = '';
-                    hideFieldMessage(amountInput);
-                }
-
-                showDonationSuccessBox();
-                showPageNotice("আপনার তথ্য সফলভাবে জমা হয়েছে।", "success");
-            } catch (err) {
-                console.error("Donation submit error:", err);
-                showPageNotice("তথ্য জমা দিতে ব্যর্থ হয়েছে। পরে আবার চেষ্টা করুন।", "error");
-            }
-        });
-    };
-
-    window.AppState = AppState;
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.container > div');
-
-    navLinks.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.dataset.tab;
-
-            navLinks.forEach(l => l.classList.remove('active'));
-            btn.classList.add('active');
-
-            sections.forEach(sec => sec.classList.add('hidden'));
-            const targetEl = document.getElementById(target + '-sec');
-            if (targetEl) {
-                targetEl.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('hidden');
     });
 
-    /* =========================
-       COPY BUTTON
-    ========================= */
-    const savingsFloatBtn = document.getElementById('savings-float-btn');
-    if (savingsFloatBtn) {
-        savingsFloatBtn.addEventListener('click', () => {
+    const cancelBtn = modal.querySelector('#donation-cancel-btn');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    }
+
+    return modal;
+}
+
+function showDonationConfirmModal(name, amount, onConfirm) {
+    const modal = ensureDonationModal();
+    if (!modal) return;
+
+    const nameEl = document.getElementById('modal-donor-name');
+    const amountEl = document.getElementById('modal-donor-amount');
+    const oldConfirmBtn = document.getElementById('donation-confirm-btn');
+
+    if (nameEl) nameEl.textContent = name;
+    if (amountEl) amountEl.textContent = formatCurrency(amount);
+
+    if (oldConfirmBtn && oldConfirmBtn.parentNode) {
+        const newConfirmBtn = oldConfirmBtn.cloneNode(true);
+        oldConfirmBtn.parentNode.replaceChild(newConfirmBtn, oldConfirmBtn);
+
+        newConfirmBtn.addEventListener('click', async () => {
+            modal.classList.add('hidden');
+            await onConfirm();
+        });
+    }
+
+    modal.classList.remove('hidden');
+}
+
+/* ========================= SAVE DONATION ========================= */
+async function savePendingDonation(name, amount) {
+    if (!db) {
+        showPageNotice("ডেটাবেসে সংযোগ ব্যর্থ হয়েছে।", "error");
+        return;
+    }
+
+    const now = new Date();
+    const donationPayload = {
+        name,
+        amount,
+        status: "pending",
+        source: "website_form",
+        method: "pending",
+        reviewed: false,
+        adminReceived: false,
+        date: now.toLocaleDateString('bn-BD'),
+        time: now.toLocaleTimeString('bn-BD'),
+        timestamp: Date.now(),
+        createdAt: now.toISOString()
+    };
+
+    await push(ref(db, 'pending_donations'), donationPayload);
+}
+
+/* ========================= DONATION SUBMIT ========================= */
+AppState.submitDonation = () => {
+    const nameInput = document.getElementById('don-name');
+    const amountInput = document.getElementById('don-amt');
+    const name = sanitizeText(nameInput?.value || '');
+    const amount = parseInt(amountInput?.value || 0);
+
+    hideDonationSuccessBox();
+    hidePageNotice();
+    clearDonationFieldMessages();
+
+    let hasError = false;
+
+    if (!name) {
+        showFieldMessage(nameInput, "দয়া করে আপনার নাম লিখুন।", "error");
+        nameInput?.focus();
+        hasError = true;
+    }
+
+    if (!amount || amount <= 0) {
+        showFieldMessage(amountInput, "দয়া করে সঠিক টাকার পরিমাণ লিখুন।", "error");
+        if (!hasError) amountInput?.focus();
+        hasError = true;
+    }
+
+    if (hasError) return;
+
+    showDonationConfirmModal(name, amount, async () => {
+        try {
+            await savePendingDonation(name, amount);
+
+            if (nameInput) {
+                nameInput.value = '';
+                hideFieldMessage(nameInput);
+            }
+
+            if (amountInput) {
+                amountInput.value = '';
+                hideFieldMessage(amountInput);
+            }
+
+            showDonationSuccessBox();
+            showPageNotice("আপনার তথ্য সফলভাবে জমা হয়েছে।", "success");
+        } catch (err) {
+            console.error("Donation submit error:", err);
+            showPageNotice("তথ্য জমা দিতে ব্যর্থ হয়েছে। পরে আবার চেষ্টা করুন।", "error");
+        }
+    });
+};
+
+window.AppState = AppState;
+
+/* ========================= NAVIGATION ========================= */
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.container > div');
+
+navLinks.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+
+        navLinks.forEach(l => l.classList.remove('active'));
+        btn.classList.add('active');
+
+        sections.forEach(sec => sec.classList.add('hidden'));
+
+        const targetEl = document.getElementById(target + '-sec');
+        if (targetEl) {
+            targetEl.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+});
+
+/* ========================= SAVINGS FLOAT BTN ========================= */
+const savingsFloatBtn = document.getElementById('savings-float-btn');
+if (savingsFloatBtn) {
+    savingsFloatBtn.addEventListener('click', () => {
+        try {
+            sessionStorage.setItem('skipWelcomeOnce', 'true');
+        } catch (err) {
+            console.warn('Unable to save welcome skip state:', err);
+        }
+    });
+}
+
+/* ========================= COPY BUTTON ========================= */
+const copyBtn = document.getElementById('copy-btn');
+if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+        const number = document.getElementById('admin-num')?.innerText || '';
+        if (number && number !== '01XXXXXXXXX') {
             try {
-                sessionStorage.setItem('skipWelcomeOnce', 'true');
+                await navigator.clipboard.writeText(number);
+                showPageNotice("নম্বরটি কপি হয়েছে।", "success");
             } catch (err) {
-                console.warn('Unable to save welcome skip state:', err);
+                console.error("Copy failed:", err);
+                showPageNotice("নম্বর কপি করতে ব্যর্থ হয়েছে।", "error");
             }
+        } else {
+            showPageNotice("কপি করার মতো নম্বর পাওয়া যায়নি।", "warning");
+        }
+    });
+}
+
+/* ========================= MEMBER SEARCH ========================= */
+const memberSearchInput = document.getElementById('memberSearchInp');
+if (memberSearchInput) {
+    memberSearchInput.addEventListener('input', (e) => {
+        const searchValue = sanitizeText(e.target.value).toLowerCase();
+        const memberCards = document.querySelectorAll('.member-info-card');
+
+        memberCards.forEach(card => {
+            const nameText = card.querySelector('h4')?.innerText || '';
+            const phoneText = card.querySelector('.m-contact-row b')?.innerText || '';
+            const searchableText = (nameText + ' ' + phoneText).toLowerCase();
+
+            card.style.display = searchableText.includes(searchValue) ? '' : 'none';
         });
-    }
+    });
+}
 
-    const copyBtn = document.getElementById('copy-btn');
-    if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
-            const number = document.getElementById('admin-num')?.innerText || '';
+/* ========================= LIVE INPUT VALIDATION ========================= */
+const donorNameInput = document.getElementById('don-name');
+const donorAmountInput = document.getElementById('don-amt');
 
-            if (number && number !== '01XXXXXXXXX') {
-                try {
-                    await navigator.clipboard.writeText(number);
-                    showPageNotice("নম্বরটি কপি হয়েছে।", "success");
-                } catch (err) {
-                    console.error("Copy failed:", err);
-                    showPageNotice("নম্বর কপি করতে ব্যর্থ হয়েছে।", "error");
-                }
-            } else {
-                showPageNotice("কপি করার মতো নম্বর পাওয়া যায়নি।", "warning");
-            }
-        });
-    }
+if (donorNameInput) {
+    donorNameInput.addEventListener('input', () => {
+        if (sanitizeText(donorNameInput.value)) hideFieldMessage(donorNameInput);
+    });
+}
 
-    /* =========================
-       MEMBER SEARCH
-    ========================= */
-    const memberSearchInput = document.getElementById('memberSearchInp');
-    if (memberSearchInput) {
-        memberSearchInput.addEventListener('input', (e) => {
-            const searchValue = sanitizeText(e.target.value).toLowerCase();
-            const memberCards = document.querySelectorAll('.member-info-card');
+if (donorAmountInput) {
+    donorAmountInput.addEventListener('input', () => {
+        const amount = parseInt(donorAmountInput.value || 0);
+        if (amount > 0) hideFieldMessage(donorAmountInput);
+    });
+}
 
-            memberCards.forEach(card => {
-                const nameText = card.querySelector('h4')?.innerText || '';
-                const phoneText = card.querySelector('.m-contact-row b')?.innerText || '';
-                const searchableText = (nameText + ' ' + phoneText).toLowerCase();
-                card.style.display = searchableText.includes(searchValue) ? '' : 'none';
-            });
-        });
-    }
+/* ========================= SUBMIT BUTTON ========================= */
+const submitBtn = document.getElementById('submit-btn');
+if (submitBtn) {
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        AppState.submitDonation();
+    });
+}
 
-    /* =========================
-       LIVE INPUT VALIDATION CLEAR
-    ========================= */
-    const donorNameInput = document.getElementById('don-name');
-    const donorAmountInput = document.getElementById('don-amt');
+/* ========================= INIT ========================= */
+console.log("Initializing main page...");
 
-    if (donorNameInput) {
-        donorNameInput.addEventListener('input', () => {
-            if (sanitizeText(donorNameInput.value)) {
-                hideFieldMessage(donorNameInput);
-            }
-        });
-    }
+injectWelcomeScreenStyles();
+startWelcomeScreenTimer(2600);
+injectNoticeStyles();
+ensureGlobalNoticeBox();
+setupTransactionFilters();
+ensureDonationModal();
 
-    if (donorAmountInput) {
-        donorAmountInput.addEventListener('input', () => {
-            const amount = parseInt(donorAmountInput.value || 0);
-            if (amount > 0) {
-                hideFieldMessage(donorAmountInput);
-            }
-        });
-    }
+if (db) {
+    initializeSettingsListener();
+    fetchData();
+    console.log("✓ Settings listener initialized");
+    console.log("✓ Data fetching started — paths: charity_members, charity_expenses, outside_donations");
+    console.log(`✓ UI auto-hide enabled for last ${UI_RETENTION_DAYS} days`);
+}
 
-    /* =========================
-       SUBMIT BUTTON
-    ========================= */
-    const submitBtn = document.getElementById('submit-btn');
-    if (submitBtn) {
-        submitBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            AppState.submitDonation();
-        });
-    }
-
-    /* =========================
-       INIT
-    ========================= */
-    console.log("Initializing main page...");
-    injectWelcomeScreenStyles();
-    startWelcomeScreenTimer(2600);
-
-    injectNoticeStyles();
-    ensureGlobalNoticeBox();
-    setupTransactionFilters();
-    ensureDonationModal();
-
-    if (db) {
-        initializeSettingsListener();
-        fetchData();
-        console.log("✓ Settings listener initialized");
-        console.log("✓ Data fetching started");
-        console.log(`✓ UI auto-hide enabled for last ${UI_RETENTION_DAYS} days`);
-    }
-
-
-    /* =========================
-   SAVINGS FLOAT BUTTON DRAG
-========================= */
+/* ========================= SAVINGS FLOAT BUTTON DRAG ========================= */
 (function () {
     const btn = document.getElementById('savings-float-btn');
     if (!btn) return;
@@ -1874,7 +1360,6 @@
     let pointerId = null;
     let isDragging = false;
     let moved = false;
-
     let startX = 0;
     let startY = 0;
     let offsetX = 0;
@@ -1896,7 +1381,6 @@
 
     function setButtonPosition(left, top, save = false) {
         const bounds = getViewportBounds();
-
         const safeLeft = clamp(left, bounds.minLeft, bounds.maxLeft);
         const safeTop = clamp(top, bounds.minTop, bounds.maxTop);
 
@@ -1906,10 +1390,7 @@
         btn.style.bottom = 'auto';
 
         if (save) {
-            localStorage.setItem(
-                STORAGE_KEY,
-                JSON.stringify({ left: safeLeft, top: safeTop })
-            );
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({ left: safeLeft, top: safeTop }));
         }
     }
 
@@ -1920,9 +1401,7 @@
         try {
             const pos = JSON.parse(saved);
             if (typeof pos.left === 'number' && typeof pos.top === 'number') {
-                requestAnimationFrame(() => {
-                    setButtonPosition(pos.left, pos.top, false);
-                });
+                requestAnimationFrame(() => setButtonPosition(pos.left, pos.top, false));
             }
         } catch (error) {
             console.warn('Saved button position is invalid:', error);
@@ -1937,7 +1416,6 @@
         moved = false;
 
         const rect = btn.getBoundingClientRect();
-
         startX = e.clientX;
         startY = e.clientY;
         offsetX = e.clientX - rect.left;
@@ -1963,15 +1441,13 @@
                 btn.style.top = rect.top + 'px';
                 btn.style.right = 'auto';
                 btn.style.bottom = 'auto';
-            } else return;
+            } else {
+                return;
+            }
         }
 
         e.preventDefault();
-
-        const newLeft = e.clientX - offsetX;
-        const newTop = e.clientY - offsetY;
-
-        setButtonPosition(newLeft, newTop, false);
+        setButtonPosition(e.clientX - offsetX, e.clientY - offsetY, false);
     }
 
     function handlePointerUp(e) {
@@ -2005,23 +1481,19 @@
 
     function handleResize() {
         const rect = btn.getBoundingClientRect();
-
         if (btn.style.left || btn.style.top) {
             setButtonPosition(rect.left, rect.top, true);
         }
     }
 
     restoreSavedPosition();
-
     btn.addEventListener('pointerdown', handlePointerDown);
     btn.addEventListener('pointermove', handlePointerMove);
     btn.addEventListener('pointerup', handlePointerUp);
     btn.addEventListener('pointercancel', handlePointerUp);
     btn.addEventListener('click', handleClick);
-
     window.addEventListener('resize', handleResize);
 })();
-    </script>
+</script>
 </body>
-
 </html>
